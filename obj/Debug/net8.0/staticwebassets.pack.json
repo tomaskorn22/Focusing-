@@ -1,12 +1,20 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\appsettings.Development.json",
+      "PackagePath": "staticwebassets\\appsettings.Development.json"
+    },
+    {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\avatar.png",
+      "PackagePath": "staticwebassets\\img\\avatar.png"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\logo.png",

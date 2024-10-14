@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7JMXjOdLlZLKCCPHXIWxv+8zCJyTgUiNUqWhRAfeKvo=",
+  "Hash": "yAKxvxrNgn9gWkN5Q+sk3Xut2wHhEhDiozJLO7DKSuA=",
   "Source": "Focusing",
   "BasePath": "_content/Focusing",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\appsettings.Development.json",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "appsettings.Development.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\appsettings.Development.json"
+    },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\css\\site.css",
       "SourceId": "Focusing",
@@ -53,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\avatar.png",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "img/avatar.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\avatar.png"
     },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\logo.png",
