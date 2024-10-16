@@ -17,4 +17,8 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult InicioSesion()
+    {
+        return View();
+    }
 }
