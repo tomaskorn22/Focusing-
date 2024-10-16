@@ -167,3 +167,54 @@ body {
   font-size: 16px;
   line-height: 1.5;
 }
+/* Contenedor del formulario */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.register-box {
+  background-color: #37A1F2;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.register-box h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+  outline: none;
+  border: 2px solid #0F6CBB; 
+}
+
+
+.submit-btn {
+  background-color: #0F6CBB;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #094A7B;
+}
