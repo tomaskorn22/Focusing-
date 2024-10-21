@@ -18,15 +18,11 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\48385206\Desktop\Focusing-
 build_property._RazorSourceGeneratorDebug = 
 
-<<<<<<< HEAD
-[C:/Users/48242157/Downloads/Focusing-/Views/Home/CrearCuenta.cshtml]
+[C:/Users/48385206/Desktop/Focusing-/Views/Home/CrearCuenta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhckN1ZW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/48242157/Downloads/Focusing-/Views/Home/Index.cshtml]
-=======
 [C:/Users/48385206/Desktop/Focusing-/Views/Home/Index.cshtml]
->>>>>>> 90cc9dd6f1cc360745d2360bee712c814f8b7f99
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
