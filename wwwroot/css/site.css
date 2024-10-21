@@ -220,3 +220,120 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 .submit-btn:hover {
   background-color: #094A7B;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sentimientos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.sentimientos img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.sentimientos img:hover {
+  transform: scale(1.2);
+}
+
+.recordatorio, .tareas {
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.recordatorio h3, .tareas h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.recordatorio ul, .tareas ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recordatorio ul li, .tareas ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.tachado {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.contador {
+  background-color: #b3d9ff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
