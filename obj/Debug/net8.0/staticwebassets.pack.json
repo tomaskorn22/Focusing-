@@ -17,12 +17,32 @@
       "PackagePath": "staticwebassets\\img\\avatar.png"
     },
     {
+      "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\feliz.png",
+      "PackagePath": "staticwebassets\\img\\feliz.png"
+    },
+    {
       "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
+      "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\muy feliz.png",
+      "PackagePath": "staticwebassets\\img\\muy feliz.png"
+    },
+    {
+      "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\muy triste.png",
+      "PackagePath": "staticwebassets\\img\\muy triste.png"
+    },
+    {
+      "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\normal.png",
+      "PackagePath": "staticwebassets\\img\\normal.png"
+    },
+    {
       "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\ola.jpg",
       "PackagePath": "staticwebassets\\img\\ola.jpg"
+    },
+    {
+      "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\triste.png",
+      "PackagePath": "staticwebassets\\img\\triste.png"
     },
     {
       "Id": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\js\\site.js",
