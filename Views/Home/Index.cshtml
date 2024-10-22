@@ -2,69 +2,66 @@
     ViewData["Title"] = "Index";
 }
 <header class="header">
-        <div class="logo">
-            <img src="~/img/logo.png" alt="Logo">
-        </div>
-        <nav class="nav-menu">
-            <a href="#">Tablero</a>
-            <a href="#">Tips</a>
-            <a href="#">Calendario</a>
-            <a href="#">Juegos</a>
-            <a href="#">Melodía</a>
-            <a href="#">Foro</a>
-            <a href="#">Progreso</a>
-        </nav>
-        <div class="profile-icon">
-        <a href="@Url.Action("InicioSesion")">
+    <div class="logo">
+        <img src="~/img/logo.png" alt="Logo">
+    </div>
+    <nav class="nav-menu">
+        <a href="#">Tablero</a>
+        <a href="#">Tips</a>
+        <a href="#">Calendario</a>
+        <a href="#">Juegos</a>
+        <a href="#">Melodía</a>
+        <a href="#">Foro</a>
+        <a href="#">Progreso</a>
+    </nav>
+    <div class="profile-icon">
+        <a href='@Url.Action("InicioSesion")'>
         <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
         </a>
-        
-        </div>
-    </header>
-    <body>
+    </div>
+</header>
 
-    <div class="container">
-        <h1>MI TABLERO</h1>
-        <h3>¿Cómo te sentís hoy?</h3>
+<div class="container" style="min-width: 100vw;">
+    <h1>MI TABLERO</h1>
+    <h3>¿Cómo te sentís hoy?</h3>
         
-        <div class="sentimientos">
-            <img src="~/img/muy feliz.png" alt="Muy Feliz">
-            <img src="~/img/feliz.png" alt="Feliz">
-            <img src="~/img/normal.png" alt="Normal">
-            <img src="~/img/triste.png" alt="Triste">
-            <img src="~/img/muy triste.png" alt="Muy Triste">
+    <div class="sentimientos">
+        <img src="~/img/muy feliz.png" alt="Muy Feliz">
+        <img src="~/img/feliz.png" alt="Feliz">
+        <img src="~/img/normal.png" alt="Normal">
+        <img src="~/img/triste.png" alt="Triste">
+        <img src="~/img/muy triste.png" alt="Muy Triste">
+    </div>
+    
+    <div class="row">
+        <div class="recordatorio">
+            <h4>RECORDATORIO</h4>
+            <ul>
+                <li>Faltan 4 días para el tp de EFSI. ¡A estudiar!</li>
+                <li>Faltan 6 días para la prueba de Educación Judía. ¡A estudiar!</li>
+                <li>Faltan 10 días para la prueba de Inglés. ¡A estudiar!</li>
+            </ul>
         </div>
-        
-        <div class="row">
-            <div class="recordatorio">
-                <h4>RECORDATORIO</h4>
-                <ul>
-                    <li>Faltan 4 días para el tp de EFSI. ¡A estudiar!</li>
-                    <li>Faltan 6 días para la prueba de Educación Judía. ¡A estudiar!</li>
-                    <li>Faltan 10 días para la prueba de Inglés. ¡A estudiar!</li>
-                </ul>
-            </div>
-            <div class="tareas">
-                <h4>TPS/Tareas</h4>
-                <ul>
-                    <li><span class="tachado">Prueba física 14/10</span></li>
-                    <li><input type="checkbox"> Tp EFSI 19/10</li>
-                    <li><input type="checkbox"> Prueba Judía 21/10</li>
-                    <li><input type="checkbox"> Prueba Inglés 25/10</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="contador">
-            <h4>¿Cuánto tiempo querés estudiar hoy?</h4>
-            <div class="timer">
-                <span id="time">00:00:00</span>
-                <button id="start-btn">Iniciar</button>
-            </div>
-            <h4>¿Qué materia querés estudiar?</h4>
-            <input type="text" placeholder="Escribí acá">
-            <button>Enviar</button>
+        <div class="tareas">
+            <h4>TPS/Tareas</h4>
+            <ul>
+                <li><span class="tachado">Prueba física 14/10</span></li>
+                <li><input type="checkbox"> Tp EFSI 19/10</li>
+                <li><input type="checkbox"> Prueba Judía 21/10</li>
+                <li><input type="checkbox"> Prueba Inglés 25/10</li>
+            </ul>
         </div>
     </div>
-    </body>
+    
+    <div class="contador">
+        <h4>¿Cuánto tiempo querés estudiar hoy?</h4>
+        <div class="timer">
+            <span id="time">00:00:00</span>
+            <button id="start-btn">Iniciar</button>
+        </div>
+        <h4>¿Qué materia querés estudiar?</h4>
+        <input type="text" placeholder="Escribí acá">
+        <button>Enviar</button>
+    </div>
+</div>
 
