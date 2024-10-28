@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Sonidos";
+}
+<header class="header">
+    <div class="logo">
+        <img src="~/img/logo.png" alt="Logo">
+    </div>
+    <nav class="nav-menu">
+        <a href="#">Tablero</a>
+        <a href='@Url.Action("Tips")'>Tips</a>
+        <a href="#">Calendario</a>
+        <a href="#">Juegos</a>
+        <a href="#">Melodía</a>
+        <a href="#">Foro</a>
+        <a href="#">Progreso</a>
+    </nav>
+    <div class="profile-icon">
+        <a href='@Url.Action("InicioSesion")'>
+        <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
+        </a>
+    </div>
+</header>
+
+<main class="content" style="min-width: 100vw;">
+        <h1>Hacé click para escuchar melodías mientras estudias.</h1>
+        <div class="melody-grid">
+            <div class="melody-card">
+                <img src="~/img/motivacion.jpg" alt="Motivación">
+                <h3>Motivación</h3>
+                <audio controls>
+                    <source src="~/audio/motivacion.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="melody-card">
+                <img src="~/img/calma.jpg" alt="Calma">
+                <h3>Calma</h3>
+                <audio controls>
+                    <source src="~/audio/calma.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <div class="melody-card">
+                <img src="~/img/esperanza.jpg" alt="Esperanza">
+                <h3>Esperanza</h3>
+                <audio controls>
+                    <source src="~/audio/esperanza.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </main>

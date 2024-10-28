@@ -25,4 +25,12 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Tips()
+    {
+        return View();
+    }
+    public IActionResult Sonidos()
+    {
+        return View();
+    }
 }

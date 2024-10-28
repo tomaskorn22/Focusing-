@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Tips";
+}
+<header class="header">
+    <div class="logo">
+        <img src="~/img/logo.png" alt="Logo">
+    </div>
+    <nav class="nav-menu">
+        <a href="#">Tablero</a>
+        <a href="#">Tips</a>
+        <a href="#">Calendario</a>
+        <a href="#">Juegos</a>
+        <a href="#">Melodía</a>
+        <a href="#">Foro</a>
+        <a href="#">Progreso</a>
+    </nav>
+    <div class="profile-icon">
+        <a href='@Url.Action("InicioSesion")'>
+        <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
+        </a>
+    </div>
+</header>
+
+<div class="tips-container" style="min-width: 100vw;">
+    <h2>Leé estos tips antes de estudiar.</h2>
+    <div class="tips-grid">
+        <div class="tip-box">Dejá el celular a un costado y silencia las notificaciones.</div>
+        <div class="tip-box">Andá a un lugar que te haga sentir cómodo para concentrarte al 100%.</div>
+        <div class="tip-box">Antes de empezar, ponete un objetivo sobre cuánto querés estudiar.</div>
+        <div class="tip-box">Horas antes, definí el tiempo a usar para estudiar y despejalo de otras tareas.</div>
+        <div class="tip-box">Tomate descansos chiquitos, de 10 minutos, entre rato y rato de estudio.</div>
+        <div class="tip-box">Ganá tiempo, tené todo lo necesario cerca así aprovechas el tiempo.</div>
+        
+    </div>
+</div>
