@@ -33,4 +33,12 @@ public class HomeController : Controller
     {
         return View();
     }
-}
+    public IActionResult Calendario()
+    {
+        return View();
+    }
+    public IActionResult Juegos()
+    {
+        return View();
+    }
+    }

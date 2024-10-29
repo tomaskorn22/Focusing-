@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\48242157\Downloads\Focusing-
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/48242157/Downloads/Focusing-/Views/Home/Calendario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxlbmRhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/48242157/Downloads/Focusing-/Views/Home/CrearCuenta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhckN1ZW50YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -28,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/48242157/Downloads/Focusing-/Views/Home/InicioSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmljaW9TZXNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48242157/Downloads/Focusing-/Views/Home/Juegos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxKdWVnb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/48242157/Downloads/Focusing-/Views/Home/Sonidos.cshtml]

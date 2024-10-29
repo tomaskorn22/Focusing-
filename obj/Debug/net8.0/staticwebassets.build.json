@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zyDriiFLdt2K4EOxhzoe27GM8+AHvckEk+Lk19gqXx0=",
+  "Hash": "6lKi9ywQA08mJ1iE2LJI0H0sPZ8HjdCiX8z6YpiTa+A=",
   "Source": "Focusing",
   "BasePath": "_content/Focusing",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar.png"
     },
     {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\calma.jpg",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "img/calma.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\calma.jpg"
+    },
+    {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\feliz.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\motivacion.jpg",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "img/motivacion.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\motivacion.jpg"
     },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\muy feliz.png",
@@ -205,6 +243,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\ola.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\ruidourbano.jpg",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "img/ruidourbano.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\ruidourbano.jpg"
     },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\triste.png",

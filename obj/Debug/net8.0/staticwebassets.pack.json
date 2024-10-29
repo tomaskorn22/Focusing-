@@ -17,12 +17,20 @@
       "PackagePath": "staticwebassets\\img\\avatar.png"
     },
     {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\calma.jpg",
+      "PackagePath": "staticwebassets\\img\\calma.jpg"
+    },
+    {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\feliz.png",
       "PackagePath": "staticwebassets\\img\\feliz.png"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\motivacion.jpg",
+      "PackagePath": "staticwebassets\\img\\motivacion.jpg"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\muy feliz.png",
@@ -39,6 +47,10 @@
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\ola.jpg",
       "PackagePath": "staticwebassets\\img\\ola.jpg"
+    },
+    {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\ruidourbano.jpg",
+      "PackagePath": "staticwebassets\\img\\ruidourbano.jpg"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\triste.png",
