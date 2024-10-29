@@ -428,4 +428,34 @@ audio {
   margin-top: 10px;
 }
 
+/*Calendario*/
+.calendar-container {
+  display: flex;
+}
+
+#calendar {
+  margin-left: 20px;
+  width: 70%;
+}
+
+.category-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-btn {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.category-btn:nth-child(1) { background-color: #FF4D4D; } 
+.category-btn:nth-child(2) { background-color: #4D79FF; } 
+.category-btn:nth-child(3) { background-color: #B84DFF; } 
+.category-btn:nth-child(4) { background-color: #A84D7C; } 
+.category-btn:nth-child(5) { background-color: #4DD2A8; } 
+.category-btn:nth-child(6) { background-color: #FFD700; } 
 

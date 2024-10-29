@@ -1,6 +1,7 @@
 @{
     ViewData["Title"] = "Calendario";
 }
+
 <header class="header">
     <div class="logo">
         <a href='@Url.Action("Index")'>
@@ -23,3 +24,20 @@
 </header>
 <div class="tips-container" style="min-width: 100vw;">
 <h2>Guardá y organizá tus recordatorios acá.</h2>
+
+
+<div class="calendar-container" style="display: flex;">
+        <div class="category-buttons">
+            <button class="category-btn" style="background-color: #FF4D4D;">PRUEBAS</button>
+            <button class="category-btn" style="background-color: #4D79FF;">TPS</button>
+            <button class="category-btn" style="background-color: #B84DFF;">TAREAS</button>
+            <button class="category-btn" style="background-color: #A84D7C;">EXCURSIONES</button>
+            <button class="category-btn" style="background-color: #4DD2A8;">FERIADOS</button>
+            <button class="category-btn" style="background-color: #FFD700;">+ ALARMAS</button>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+</div>
+
+<script src="~/js/calendario.js"></script>
