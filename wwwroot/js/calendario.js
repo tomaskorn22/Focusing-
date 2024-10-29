@@ -1,5 +1,6 @@
 // Variables de configuración del calendario
 const calendar = document.getElementById("calendar");
+const monthSelect = document.getElementById("monthSelect");
 const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
@@ -9,10 +10,6 @@ function generateCalendar(month, year) {
     calendar.innerHTML = ""; // Limpiar el calendario
     const firstDay = new Date(year, month).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-    // Cabecera del calendario
-    let header = `<h3>${monthNames[month]} ${year}</h3>`;
-    calendar.innerHTML += header;
 
     // Tabla de calendario
     let table = "<table border='1' style='width: 100%; text-align: center;'><tr>";
@@ -38,7 +35,14 @@ function generateCalendar(month, year) {
     calendar.innerHTML += table;
 }
 
-// Generar calendario del mes actual
+// Función para manejar el cambio de mes
+function changeMonth() {
+    currentMonth = parseInt(monthSelect.value); // Obtener el mes seleccionado
+    generateCalendar(currentMonth, currentYear); // Actualizar el calendario
+}
+
+// Generar el calendario del mes actual al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
+    monthSelect.value = currentMonth; // Establecer el mes actual en el selector
     generateCalendar(currentMonth, currentYear);
 });

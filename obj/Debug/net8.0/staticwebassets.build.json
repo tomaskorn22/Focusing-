@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6lKi9ywQA08mJ1iE2LJI0H0sPZ8HjdCiX8z6YpiTa+A=",
+  "Hash": "b6kuyKp4gUkDkOxKQSryHJDWplGu23DjkrnqFnTKH0g=",
   "Source": "Focusing",
   "BasePath": "_content/Focusing",
   "Mode": "Default",
@@ -281,6 +281,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\triste.png"
+    },
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\calendario.js",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "js/calendario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\calendario.js"
     },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\site.js",

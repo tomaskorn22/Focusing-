@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\img\\triste.png"
     },
     {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\calendario.js",
+      "PackagePath": "staticwebassets\\js\\calendario.js"
+    },
+    {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
