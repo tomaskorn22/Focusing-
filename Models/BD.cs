@@ -25,4 +25,11 @@ public static class BD
             db.QueryFirstOrDefault(sql, new{Usuario = Nombre});
         }
     }
+
+    public static void GuardarRecordatorio(Recordatorio Rec){
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "INSERT INTO Recordatorio (Sentimiento, Tiempo, Materia) VALUES (@pSentimiento, @pTiempo, @pMateria)";
+            db.Execute(sql, new{pSentimiento = Obj.Sentimiento, pTiempo = Obj.Tiempo,  pMateria = Obj.Materia});
+        }
+    }
 }
