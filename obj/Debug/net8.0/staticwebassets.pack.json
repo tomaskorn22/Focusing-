@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\img\\calma.jpg"
     },
     {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\diferencias.jpg",
+      "PackagePath": "staticwebassets\\img\\diferencias.jpg"
+    },
+    {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\feliz.png",
       "PackagePath": "staticwebassets\\img\\feliz.png"
     },
@@ -49,8 +53,20 @@
       "PackagePath": "staticwebassets\\img\\ola.jpg"
     },
     {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\rompecabezas.png",
+      "PackagePath": "staticwebassets\\img\\rompecabezas.png"
+    },
+    {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\ruidourbano.jpg",
       "PackagePath": "staticwebassets\\img\\ruidourbano.jpg"
+    },
+    {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\sopadeletras.png",
+      "PackagePath": "staticwebassets\\img\\sopadeletras.png"
+    },
+    {
+      "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\sudoku.png",
+      "PackagePath": "staticwebassets\\img\\sudoku.png"
     },
     {
       "Id": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\img\\triste.png",

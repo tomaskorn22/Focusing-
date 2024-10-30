@@ -1,10 +1,10 @@
 public class Usuario
 {
-    public string nombre { get; set; }
-    public string apellido { get; set; }
-    public string mail { get; set; }
-    public string contraseña { get; set; }
-    public int  edad { get; set; }
+    public string Nombre { get; set; }
+    public string Apellido { get; set; }
+    public string Mail { get; set; }
+    public string Contraseña { get; set; }
+    public int  Edad { get; set; }
 
 
 }

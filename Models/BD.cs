@@ -3,7 +3,7 @@ using Dapper;
 
 public static class BD
 {
-    const string CONNECTION_STRING = "Server=localhost;DataBase=Focusing Empowering Minds;Trusted_Connection=True;";
+    const string _connectionString = "Server=localhost;DataBase=Focusing Empowering Minds;Trusted_Connection=True;";
 
     public static void AgregarUsuario(Usuario Usu){
         using(SqlConnection db = new SqlConnection(_connectionString)){
