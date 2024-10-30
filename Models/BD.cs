@@ -11,4 +11,11 @@ public static class BD
             db.Execute(sql, new{pNombre = Usu.Nombre, pApellido = Usu.Apellido,  pMail = Usu.Mail, pContraseña = Usu.Contraseña, pEdad = Usu.Edad});
         }
     }
+
+    public static void AgregarObjetivo(Objetivo Obj){
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "INSERT INTO Objetivos (Sentimiento, Tiempo, Materia) VALUES (@pSentimiento, @pTiempo, @pMateria)";
+            db.Execute(sql, new{pSentimiento = Obj.Sentimiento, pTiempo = Obj.Tiempo,  pMateria = Obj.Materia});
+        }
+    }
 }
