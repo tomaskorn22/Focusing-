@@ -18,4 +18,11 @@ public static class BD
             db.Execute(sql, new{pSentimiento = Obj.Sentimiento, pTiempo = Obj.Tiempo,  pMateria = Obj.Materia});
         }
     }
+
+    public static void ObtenerDatos(Usuario Usu){
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
+            db.QueryFirstOrDefault(sql, new{Usuario = Nombre});
+        }
+    }
 }
