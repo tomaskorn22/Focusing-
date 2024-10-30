@@ -36,6 +36,19 @@ public static class BD
 
         return Juego;
     }
+   public static List<Melodias> ObtenerSonidos()
+{
+    List<Melodias> sonidos = null;
+
+    using(SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Melodias";
+        sonidos = db.Query<Melodias>(sql).ToList();
+    }
+
+    return sonidos;
+}
+
 
     public static void GuardarRecordatorio(Recordatorio Rec){
         using(SqlConnection db = new SqlConnection(_connectionString)){

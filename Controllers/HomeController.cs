@@ -49,5 +49,12 @@ public class HomeController : Controller
 
         return View("Juegos");
     }
+   public IActionResult ListaMelodias()
+   {
+    List<Melodias> sonidos = BD.ObtenerSonidos();
+    ViewBag.Sonidos = sonidos;
+
+    return View("Sonidos");
+}
 
 }
