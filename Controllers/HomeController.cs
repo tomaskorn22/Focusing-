@@ -41,4 +41,13 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult ListaJuegos()
+    {
+        List<Juegos> juegos = BD.ObtenerJuegos();
+        ViewBag.Juegos = juegos;
+
+        return View("Juegos");
     }
+
+}

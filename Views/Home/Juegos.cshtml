@@ -16,21 +16,23 @@
         <a href="#">Progreso</a>
     </nav>
     
-    
-     @if (ViewBag.Paises.Count != 0)
-    {
+@if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
+{
     <ul class="listaImagenes">
-        @foreach (Pais pais in ViewBag.Paises)
+        @foreach (Juegos juego in ViewBag.Juegos)
         {
-        <li><a href="@Url.Action("VerDetallePais", new { idPais = pais.IdPais })">
-            <img src="@pais.Bandera" alt="Bandera de @pais.Nombre">
-            <p>@pais.Nombre</p>
-        </a></li>
+            <li>
+                <a href='@Url.Action("Jugar", new { idJuego = juego.id_juegos })'>
+                    <img src="@juego.foto" alt="Imagen de @juego.titulo" />
+                    <p>@juego.titulo</p>
+                    <p>@juego.descripcion</p>
+                    <button class="jugar-btn">Jugar</button>
+                </a>
+            </li>
         }
     </ul>
-    }
-    else
-    {
-    <p class="text-secondary text-center">No hay paises.</p>
-    }
-</div>
+}
+else
+{
+    <p class="text-secondary text-center">No hay juegos disponibles.</p>
+}

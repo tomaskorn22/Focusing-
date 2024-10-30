@@ -22,8 +22,19 @@ public static class BD
     public static void ObtenerDatos(Usuario Usu){
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
-            db.QueryFirstOrDefault(sql, new{Usuario = Nombre});
+            db.QueryFirstOrDefault(sql, new{pNombre = Usu});
         }
+    }
+
+    public static List<Juegos> ObtenerJuegos(){
+        List<Juegos> Juego = null;
+
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "SELECT * FROM Juegos";
+            Juego = db.Query<Juegos>(sql).ToList();
+        }
+
+        return Juego;
     }
 
     public static void GuardarRecordatorio(Recordatorio Rec){
