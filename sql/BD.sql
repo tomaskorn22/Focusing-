@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Focusing Empowering Minds]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Database [Focusing Empowering Minds]    Script Date: 30/10/2024 08:33:11 ******/
 CREATE DATABASE [Focusing Empowering Minds]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [Focusing Empowering Minds] SET QUERY_STORE = OFF
 GO
 USE [Focusing Empowering Minds]
 GO
-/****** Object:  User [alumno]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  User [alumno]    Script Date: 30/10/2024 08:33:11 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Calendario]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Calendario]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[Calendario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Foro]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Foro]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -127,23 +127,23 @@ CREATE TABLE [dbo].[Foro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Juegos]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Juegos]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Juegos](
-	[id_juego] [int] IDENTITY(1,1) NOT NULL,
-	[titulo] [varchar](100) NULL,
-	[fecha_Creacion] [datetime] NULL,
+	[id_juegos] [int] IDENTITY(1,1) NOT NULL,
+	[titulo] [varchar](50) NULL,
+	[descripcion] [varchar](200) NULL,
 	[foto] [text] NULL,
  CONSTRAINT [PK_Juegos] PRIMARY KEY CLUSTERED 
 (
-	[id_juego] ASC
+	[id_juegos] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Melodias]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Melodias]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[Melodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Recordatorio]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Recordatorio]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[Recordatorio](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sentimientos]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Sentimientos]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -190,7 +190,7 @@ CREATE TABLE [dbo].[Sentimientos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tips]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Tips]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -205,7 +205,7 @@ CREATE TABLE [dbo].[Tips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 21/10/2024 09:10:24 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 30/10/2024 08:33:11 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -222,6 +222,16 @@ CREATE TABLE [dbo].[Usuarios](
 	[Id_usuario] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Juegos] ON 
+
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (1, N'Rompecabezas', N'Encajá las piezas para formar una imagen.', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTcWrMKBNJSJgBnwQb?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (2, N'Sudoku', N'Descubrí donde va cada número sin repetir en columna, fila o cuadrado. ', N'https://lh5.googleusercontent.com/proxy/XayDM97LThnmbYdELhbkmoAFh3O6HOMz3yBHnmoSLptsOBA5dhXv0YXk_faavulZaN1JuYHaAS1dpavvDnqRZ_gNA52flHgE9dVBQwijCGNVfA9i7-4')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (3, N'Crucigrama', N'Encontrá todas las palabras cruzadas. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTcWjVZbSBpVMGRpdF?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (4, N'Sopa de letras', N'Encontrá todas las palabras ocultas. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTfkvLmwhwkrGSzNNx?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (5, N'Diferencias', N'Encontrá todas las diferencias entre las imagenes. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSmwXHzHchcRGXcpvjKnnL?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (6, N'Memotest', N'Encontrá los pares de los distintos dibujos escondidos. ', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DjfCZLsVxgwHPoR3xgHEKtt1j8i_cCJkqA&s')
+SET IDENTITY_INSERT [dbo].[Juegos] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Melodias] ON 
 
