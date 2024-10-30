@@ -480,42 +480,99 @@ audio {
 }
 
 /*Juegos*/
-.games-container {
+/* Estilos para el header */
+.header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background-color: #e0f4ff;
-}
-
-.game-card {
-  background-color: #3498db;
+  align-items: center;
+  background-color: #2f4f6f;
+  padding: 10px;
   color: white;
-  width: 200px;
-  padding: 15px;
-  border-radius: 8px;
+}
+
+.header .logo img {
+  height: 50px;
+}
+
+.nav-menu {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #ffd700;
+}
+
+/* Estilos para el título de juegos */
+h2 {
   text-align: center;
-}
-
-.game-card img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
-.game-card button {
-  background-color: #e0e0e0;
+  font-size: 24px;
   color: #333;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
-.game-card button:hover {
-  background-color: #d0d0d0;
+/* Estilos para la lista de juegos */
+.listaImagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Tarjeta de juego */
+.listaImagenes li {
+  width: 200px;
+  background-color: #4a90e2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listaImagenes img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.listaImagenes p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Botón Jugar */
+.jugar-btn {
+  background-color: #4b7bba;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.jugar-btn:hover {
+  background-color: #3a6390;
+}
+
+/* Ajuste del fondo */
+body {
+  background-color: #f4f4f4;
 }
