@@ -10,34 +10,38 @@
         <a href='@Url.Action("Index")'>Tablero</a>
         <a href='@Url.Action("Tips")'>Tips</a>
         <a href='@Url.Action("Calendario")'>Calendario</a>
-        <a href='@Url.Action("Juegos")'>Juegos</a>
-        <a href='@Url.Action("Sonidos")'>Melodía</a>
+        <a href='@Url.Action("ListaJuegos")'>Juegos</a>
+        <a href='@Url.Action("ListaMelodias")'>Melodía</a>
         <a href="#">Foro</a>
         <a href="#">Progreso</a>
     </nav>
 
-    </header>
+</header>
     
-    <div class="tips-container" style="min-width: 100vw;">
+<div class="tips-container" style="min-width: 100vw;">
     <h1>Jugá alguno de estos juegos antes de estudiar.</h1>
-@if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
-{
-    <ul class="listaImagenes">
-        @foreach (Juegos juego in ViewBag.Juegos)
+    <div class="row">
+        @if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
         {
-            <li>
-                <a href='@Url.Action("Jugar", new { idJuego = juego.id_juegos })'>
-                    <img src="@juego.foto" alt="Imagen de @juego.titulo" />
-                    <p>@juego.titulo</p>
-                    <p>@juego.descripcion</p>
-                    <button class="jugar-btn">Jugar</button>
-                </a>
-            </li>
+            <ul class="listaImagenes">
+                @foreach (Juegos juego in ViewBag.Juegos)
+                {   
+                    <div class="col-md-3">
+                        <li>
+                            <a href='@Url.Action("Jugar", new { idJuego = juego.id_juegos })'>
+                                <img src="@juego.foto" alt="Imagen de @juego.titulo" />
+                                <p class="text-dark">@juego.titulo</p>
+                                <p class="text-dark">@juego.descripcion</p>
+                                <button class="jugar-btn">Jugar</button>
+                            </a>
+                        </li>
+                    </div>
+                }
+            </ul>
         }
-    </ul>
-}
-else
-{
-    <p class="text-secondary text-center">No hay juegos disponibles.</p>
-}
+        else
+        {
+            <p class="text-secondary text-center">No hay juegos disponibles.</p>
+        }
+    </div>
 </div>
