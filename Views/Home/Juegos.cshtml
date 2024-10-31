@@ -20,28 +20,24 @@
     
 <div class="tips-container" style="min-width: 100vw;">
     <h1>Jugá alguno de estos juegos antes de estudiar.</h1>
-    <div class="row">
-        @if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
-        {
-            <ul class="listaImagenes">
-                @foreach (Juegos juego in ViewBag.Juegos)
-                {   
-                    <div class="col-md-3">
-                        <li>
-                            <a href='@Url.Action("Jugar", new { idJuego = juego.id_juegos })'>
-                                <img src="@juego.foto" alt="Imagen de @juego.titulo" />
-                                <p class="text-dark">@juego.titulo</p>
-                                <p class="text-dark">@juego.descripcion</p>
-                                <button class="jugar-btn">Jugar</button>
-                            </a>
-                        </li>
-                    </div>
-                }
-            </ul>
-        }
-        else
-        {
-            <p class="text-secondary text-center">No hay juegos disponibles.</p>
-        }
-    </div>
+    @if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
+    {
+        <ul class="listaImagenes">
+            @foreach (Juegos juego in ViewBag.Juegos)
+            {   
+                <li>
+                    <a href='@Url.Action("Jugar", new { idJuego = juego.id_juegos })'>
+                        <img src="@juego.foto" alt="Imagen de @juego.titulo" />
+                        <p class="text-dark">@juego.titulo</p>
+                        <p class="text-dark">@juego.descripcion</p>
+                        <button class="jugar-btn">Jugar</button>
+                    </a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="text-secondary text-center">No hay juegos disponibles.</p>
+    }
 </div>

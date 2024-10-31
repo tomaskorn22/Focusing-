@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Focusing Empowering Minds]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Database [Focusing Empowering Minds]    Script Date: 31/10/2024 15:10:43 ******/
 CREATE DATABASE [Focusing Empowering Minds]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [Focusing Empowering Minds] SET QUERY_STORE = OFF
 GO
 USE [Focusing Empowering Minds]
 GO
-/****** Object:  User [alumno]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  User [alumno]    Script Date: 31/10/2024 15:10:43 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Calendario]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Calendario]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[Calendario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Foro]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Foro]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -127,7 +127,7 @@ CREATE TABLE [dbo].[Foro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Juegos]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Juegos]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[Juegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Melodias]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Melodias]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[Melodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Recordatorio]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Recordatorio]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[Recordatorio](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sentimientos]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Sentimientos]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -190,22 +190,21 @@ CREATE TABLE [dbo].[Sentimientos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tips]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Tips]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Tips](
 	[id_tips] [int] IDENTITY(1,1) NOT NULL,
-	[descripcion] [varchar](300) NULL,
-	[foto] [text] NULL,
+	[descripcion] [varchar](200) NULL,
  CONSTRAINT [PK_Tips] PRIMARY KEY CLUSTERED 
 (
 	[id_tips] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 30/10/2024 08:33:11 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 31/10/2024 15:10:43 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -225,18 +224,30 @@ CREATE TABLE [dbo].[Usuarios](
 GO
 SET IDENTITY_INSERT [dbo].[Juegos] ON 
 
-INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (1, N'Rompecabezas', N'Encajá las piezas para formar una imagen.', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTcWrMKBNJSJgBnwQb?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (1, N'Rompecabezas', N'Encajá las piezas para formar una imagen.', N'https://cdn-icons-png.flaticon.com/512/5873/5873228.png')
 INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (2, N'Sudoku', N'Descubrí donde va cada número sin repetir en columna, fila o cuadrado. ', N'https://lh5.googleusercontent.com/proxy/XayDM97LThnmbYdELhbkmoAFh3O6HOMz3yBHnmoSLptsOBA5dhXv0YXk_faavulZaN1JuYHaAS1dpavvDnqRZ_gNA52flHgE9dVBQwijCGNVfA9i7-4')
-INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (3, N'Crucigrama', N'Encontrá todas las palabras cruzadas. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTcWjVZbSBpVMGRpdF?projector=1&messagePartId=0.1')
-INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (4, N'Sopa de letras', N'Encontrá todas las palabras ocultas. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSwDKTfkvLmwhwkrGSzNNx?projector=1&messagePartId=0.1')
-INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (5, N'Diferencias', N'Encontrá todas las diferencias entre las imagenes. ', N'https://mail.google.com/mail/u/1/#inbox/FMfcgzQXJsvSmwXHzHchcRGXcpvjKnnL?projector=1&messagePartId=0.1')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (3, N'Crucigrama', N'Encontrá todas las palabras cruzadas. ', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGC2OXpWQZGZ0M0mVfxtTtFaUJSqTIUbDang&s')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (4, N'Sopa de letras', N'Encontrá todas las palabras ocultas. ', N'https://upload.wikimedia.org/wikipedia/commons/a/a4/Ortograf%C3%ADa_b-v.png')
+INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (5, N'Diferencias', N'Encontrá todas las diferencias entre las imagenes. ', N'https://comunidad.pami.org.ar/wp-content/uploads/2021/08/JUEGOS-NUEVA-IMAGEN-13.png')
 INSERT [dbo].[Juegos] ([id_juegos], [titulo], [descripcion], [foto]) VALUES (6, N'Memotest', N'Encontrá los pares de los distintos dibujos escondidos. ', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5DjfCZLsVxgwHPoR3xgHEKtt1j8i_cCJkqA&s')
 SET IDENTITY_INSERT [dbo].[Juegos] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Melodias] ON 
 
-INSERT [dbo].[Melodias] ([id_Melodias], [titulo], [sonido], [foto]) VALUES (1, N'1', NULL, NULL)
+INSERT [dbo].[Melodias] ([id_Melodias], [titulo], [sonido], [foto]) VALUES (1, N'Motivacion', N'C:\Users\48242157\Downloads\MusicaMotivacional.mp3', N'https://img.freepik.com/free-photo/man-jumping-impossible-possible-cliff-sunset-background-business-concept-idea_1323-265.jpg')
+INSERT [dbo].[Melodias] ([id_Melodias], [titulo], [sonido], [foto]) VALUES (2, N'Calma', N'C:\Users\48242157\Downloads\MusicaCalma.mp3', N'https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2023/10/10/6524fb7122390.r_d.2845-2239-2000.jpeg')
+INSERT [dbo].[Melodias] ([id_Melodias], [titulo], [sonido], [foto]) VALUES (3, N'Ruido Urbano', N'C:\Users\48242157\Downloads\Ruido urbano.mp3', N'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgTKvECmghMuz7PFr2bkiz5eIW-GvznNGN_A&s')
 SET IDENTITY_INSERT [dbo].[Melodias] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Tips] ON 
+
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (1, N'Dejá el celular a un costado y silencia las notificaciones.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (2, N'Andá a un lugar que te haga sentir cómodo para concentrarte al 100%')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (3, N'Antes de empezar, ponete un objetivo sobre cuánto querés estudiar.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (4, N'Horas antes, definí el tiempo a usar para estudiar y despejalo de otras tareas.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (5, N'Tomate descansos chiquitos, de 10 minutos, entre rato y rato de estudio.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (6, N'Ganá tiempo, tené todo lo necesario cerca así aprovechas el tiempo.')
+SET IDENTITY_INSERT [dbo].[Tips] OFF
 GO
 ALTER TABLE [dbo].[Calendario]  WITH CHECK ADD  CONSTRAINT [FK_Calendario_Categorias] FOREIGN KEY([id_categoria])
 REFERENCES [dbo].[Categorias] ([id_categoria])
