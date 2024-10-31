@@ -55,6 +55,13 @@ public class HomeController : Controller
     ViewBag.Sonidos = sonidos;
 
     return View("Sonidos");
-}
+   }
+   public IActionResult ListaTips()
+   {
+    List<Tips> tips = BD.ObtenerTips();
+    ViewBag.Tips = tips;
+
+    return View("Tips");
+   }
 
 }

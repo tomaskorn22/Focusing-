@@ -49,6 +49,20 @@ public static class BD
     return sonidos;
 }
 
+   public static List<Tips> ObtenerTips()
+    {
+    List<Tips> tips = null;
+
+    using(SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Tips";
+        tips = db.Query<Tips>(sql).ToList();
+    }
+
+    return tips;
+   }
+
+
 
     public static void GuardarRecordatorio(Recordatorio Rec){
         using(SqlConnection db = new SqlConnection(_connectionString)){

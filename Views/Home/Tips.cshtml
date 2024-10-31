@@ -1,14 +1,16 @@
 @{
     ViewData["Title"] = "Tips";
 }
+
 <header class="header">
     <div class="logo">
-         <a href='@Url.Action("Index")'>
-        <img src="~/img/logo.png" alt="Logo">
+        <a href='@Url.Action("Index")'>
+            <img src="~/img/logo.png" alt="Logo">
+        </a>
     </div>
     <nav class="nav-menu">
         <a href='@Url.Action("Index")'>Tablero</a>
-        <a href='@Url.Action("Tips")'>Tips</a>
+        <a href='@Url.Action("ListaTips")'>Tips</a>
         <a href='@Url.Action("Calendario")'>Calendario</a>
         <a href='@Url.Action("ListaJuegos")'>Juegos</a>
         <a href='@Url.Action("ListaMelodias")'>Melodía</a>
@@ -17,20 +19,26 @@
     </nav>
     <div class="profile-icon">
         <a href='@Url.Action("InicioSesion")'>
-        <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
+            <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
         </a>
     </div>
 </header>
 
 <div class="tips-container" style="min-width: 100vw;">
     <h2>Leé estos tips antes de estudiar.</h2>
-    <div class="tips-grid">
-        <div class="tip-box">Dejá el celular a un costado y silencia las notificaciones.</div>
-        <div class="tip-box">Andá a un lugar que te haga sentir cómodo para concentrarte al 100%.</div>
-        <div class="tip-box">Antes de empezar, ponete un objetivo sobre cuánto querés estudiar.</div>
-        <div class="tip-box">Horas antes, definí el tiempo a usar para estudiar y despejalo de otras tareas.</div>
-        <div class="tip-box">Tomate descansos chiquitos, de 10 minutos, entre rato y rato de estudio.</div>
-        <div class="tip-box">Ganá tiempo, tené todo lo necesario cerca así aprovechas el tiempo.</div>
-        
-    </div>
+    @if (ViewBag.Tips != null && ViewBag.Tips.Count > 0)
+    {
+        <ul class="listaImagenes">
+            @foreach (Tips tip in ViewBag.Tips)
+            {
+                <li>
+                    <p>@tip.descripcion</p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="text-secondary text-center">No hay tips disponibles.</p>
+    }
 </div>
