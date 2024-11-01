@@ -335,17 +335,6 @@ input[type="email"]:focus {
 .submit-btn:hover {
   background-color: #094A7B;
 }
-.create-accounta {
-  margin-top: 20px;
-  background-color: #467097; /*Cambiar el color de acuerdo al que sea nom acuerdo ahora*/
-  color: #4A90E2;
-  border: none;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-}
 /*Fin crear cuenta*/
 /*Tips*/
 .logo {
@@ -590,3 +579,4 @@ h2 {
 body {
   background-color: #f4f4f4;
 }
+

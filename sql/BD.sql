@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Focusing Empowering Minds]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Database [Focusing Empowering Minds]    Script Date: 1/11/2024 15:25:49 ******/
 CREATE DATABASE [Focusing Empowering Minds]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [Focusing Empowering Minds] SET QUERY_STORE = OFF
 GO
 USE [Focusing Empowering Minds]
 GO
-/****** Object:  User [alumno]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  User [alumno]    Script Date: 1/11/2024 15:25:49 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Calendario]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Calendario]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[Calendario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Foro]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Foro]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -127,7 +127,7 @@ CREATE TABLE [dbo].[Foro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Juegos]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Juegos]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[Juegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Melodias]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Melodias]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -159,7 +159,7 @@ CREATE TABLE [dbo].[Melodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Recordatorio]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Recordatorio]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -175,7 +175,7 @@ CREATE TABLE [dbo].[Recordatorio](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sentimientos]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Sentimientos]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -190,7 +190,52 @@ CREATE TABLE [dbo].[Sentimientos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tips]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[SentimientosXJuegos]    Script Date: 1/11/2024 15:25:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SentimientosXJuegos](
+	[id_sentimientosXjuego] [int] IDENTITY(1,1) NOT NULL,
+	[Id_sentimiento] [int] NULL,
+	[id_juegos] [int] NULL,
+ CONSTRAINT [PK_SentimientosXJuegos] PRIMARY KEY CLUSTERED 
+(
+	[id_sentimientosXjuego] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SentimientosXMelodias]    Script Date: 1/11/2024 15:25:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SentimientosXMelodias](
+	[id_sentimientoXmelodias] [int] IDENTITY(1,1) NOT NULL,
+	[Id_sentimiento] [int] NULL,
+	[id_Melodias] [int] NULL,
+ CONSTRAINT [PK_SentimientosXMelodias] PRIMARY KEY CLUSTERED 
+(
+	[id_sentimientoXmelodias] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[SentimientosXTips]    Script Date: 1/11/2024 15:25:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SentimientosXTips](
+	[id_sentimientosXtips] [int] IDENTITY(1,1) NOT NULL,
+	[Id_sentimiento] [int] NULL,
+	[id_tips] [int] NULL,
+ CONSTRAINT [PK_SentimientosXTips] PRIMARY KEY CLUSTERED 
+(
+	[id_sentimientosXtips] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tips]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -204,7 +249,7 @@ CREATE TABLE [dbo].[Tips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 31/10/2024 15:10:43 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 1/11/2024 15:25:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -247,6 +292,18 @@ INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (3, N'Antes de empezar, po
 INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (4, N'Horas antes, definí el tiempo a usar para estudiar y despejalo de otras tareas.')
 INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (5, N'Tomate descansos chiquitos, de 10 minutos, entre rato y rato de estudio.')
 INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (6, N'Ganá tiempo, tené todo lo necesario cerca así aprovechas el tiempo.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (7, N'Ten a mano todo lo que necesitas, como libros, cuadernos y útiles, para no perder tiempo buscando.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (8, N' Establece un plan diario o semanal que incluya sesiones de estudio para diferentes materias.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (9, N'Crea tarjetas con conceptos clave para repasar de manera rápida y efectiva.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (10, N'Imagina cómo será el examen o la presentación, y cómo aplicarás lo que has estudiado.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (11, N'Dedica unos minutos antes de cada sesión a revisar lo que estudiaste anteriormente, esto activa la memoria.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (12, N'Asegúrate de que la temperatura de la habitación y la iluminación sean cómodas para ti.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (13, N'Prométete un pequeño premio después de cumplir tus metas de estudio para mantenerte motivado.
+
+')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (14, N'Estudiar en una posición cómoda pero erguida puede ayudarte a mantener la concentración.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (15, N'Resalta o escribe con diferentes colores para facilitar la memorización.')
+INSERT [dbo].[Tips] ([id_tips], [descripcion]) VALUES (16, N'Visualiza tu éxito y mantente enfocado en tus logros, esto mejora la motivación y concentración.')
 SET IDENTITY_INSERT [dbo].[Tips] OFF
 GO
 ALTER TABLE [dbo].[Calendario]  WITH CHECK ADD  CONSTRAINT [FK_Calendario_Categorias] FOREIGN KEY([id_categoria])
