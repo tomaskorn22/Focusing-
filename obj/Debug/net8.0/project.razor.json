@@ -19382,6 +19382,11 @@
       "FilePath": "c:\\Users\\48242157\\Downloads\\Focusing-\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48242157\\Downloads\\Focusing-\\Views\\Home\\Perfil.cshtml",
+      "TargetPath": "Views\\Home\\Perfil.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.3"

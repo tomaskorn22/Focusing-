@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Perfil";
+}
+<header class="header">
+    <div class="logo">
+         <a href='@Url.Action("Index")'>
+        <img src="~/img/logo.png" alt="Logo">
+    </div>
+    <nav class="nav-menu">
+        <a href='@Url.Action("Index")'>Tablero</a>
+        <a href='@Url.Action("ListaTips")'>Tips</a>
+        <a href='@Url.Action("Calendario")'>Calendario</a>
+        <a href='@Url.Action("ListaJuegos")'>Juegos</a>
+        <a href='@Url.Action("ListaMelodias")'>Melodía</a>
+        <a href="#">Foro</a>
+        <a href="#">Progreso</a>
+        <a href='@Url.Action("Perfil")'>Perfil</a>
+    </nav>
+    <div class="profile-icon">
+        <a href='@Url.Action("InicioSesion")'>
+        <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
+        </a>
+    </div>
+</header>
+<div class="container" style="min-width: 100vw;">
+</div>
