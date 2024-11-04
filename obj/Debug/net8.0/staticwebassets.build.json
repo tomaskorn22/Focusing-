@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tjiCmay4q9Y8xnPwCL/d1X3cvk9qYZm+30DG3720RD0=",
+  "Hash": "bY9Q7PAxTdVNDnP78fKT1Qdp5cKlLj2N5wWJ0kl3oKA=",
   "Source": "Focusing",
   "BasePath": "_content/Focusing",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Focusing\\wwwroot",
       "Source": "Focusing",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\appsettings.Development.json",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\appsettings.Development.json",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "appsettings.Development.json",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\appsettings.Development.json"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\css\\site.css",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\favicon.ico",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\avatar.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\avatar.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/avatar.png",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\img\\avatar.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\calma.jpg",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\calma.jpg",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/calma.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\img\\calma.jpg"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\diferencias.jpg",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\diferencias.jpg",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/diferencias.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\img\\diferencias.jpg"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\feliz.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\feliz.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/feliz.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\img\\feliz.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\logo.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\motivacion.jpg",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\motivacion.jpg",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/motivacion.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\img\\motivacion.jpg"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\muy feliz.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\muy feliz.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/muy feliz.png",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\img\\muy feliz.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\muy triste.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\muy triste.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/muy triste.png",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\img\\muy triste.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\normal.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\normal.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/normal.png",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\img\\normal.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\ola.jpg",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\ola.jpg",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/ola.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ola.jpg"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\rompecabezas.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\rompecabezas.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/rompecabezas.png",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\img\\rompecabezas.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\ruidourbano.jpg",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\ruidourbano.jpg",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/ruidourbano.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ruidourbano.jpg"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\sopadeletras.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\sopadeletras.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/sopadeletras.png",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\img\\sopadeletras.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\sudoku.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\sudoku.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/sudoku.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\sudoku.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\img\\triste.png",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\img\\triste.png",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "img/triste.png",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\img\\triste.png"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\js\\calendario.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\js\\calendario.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "js/calendario.js",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\js\\calendario.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\js\\site.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Focusing",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\48385206\\Desktop\\Focusing-\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\48385206\\Downloads\\Focusing-\\wwwroot\\",
       "BasePath": "_content/Focusing",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
