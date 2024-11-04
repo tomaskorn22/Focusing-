@@ -109,3 +109,15 @@ C:\Users\48796259\Downloads\Focusing-\obj\Debug\net8.0\refint\Focusing.dll
 C:\Users\48796259\Downloads\Focusing-\obj\Debug\net8.0\Focusing.pdb
 C:\Users\48796259\Downloads\Focusing-\obj\Debug\net8.0\Focusing.genruntimeconfig.cache
 C:\Users\48796259\Downloads\Focusing-\obj\Debug\net8.0\ref\Focusing.dll
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.csproj.AssemblyReference.cache
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.AssemblyInfoInputs.cache
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.AssemblyInfo.cs
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.csproj.CoreCompileInputs.cache
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.RazorAssemblyInfo.cache
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.RazorAssemblyInfo.cs
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.sourcelink.json
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.dll
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\refint\Focusing.dll
+C:\Users\48385206\Downloads\Focusing-\obj\Debug\net8.0\Focusing.pdb

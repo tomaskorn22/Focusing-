@@ -19,8 +19,8 @@ public class HomeController : Controller
     }
     public IActionResult InicioSesion(Usuario usu)
     {
-        UsuarioReal = BD.ObtenerContraseña(Usu);
-        if(usu.Contraseña == UsuarioReal.Contraseña){
+        contraReal = BD.ObtenerContraseña(usu);
+        if(usu.Contraseña == contraReal){
             return View("Index");
         }
         else{

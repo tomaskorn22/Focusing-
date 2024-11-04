@@ -69,14 +69,14 @@ public static class BD
         }
     }
 
-    public static Usuario ObtenerContraseña(Usuario Usu)
-    {
-        Usuario usuario = null;
+    public static string ObtenerContraseña(Usuario Usu)
+    {   
+        string contraReal;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Usuario WHERE Nombre = @pUsu.Nombre";
-            usuario = db.QueryFirstOrDefault<Usuario>(sql);
+            string sql = "SELECT Contraseña FROM Usuario WHERE Nombre = @pUsu.Nombre";
+            contraReal = db.QueryFirstOrDefault<string>(sql, new { Nombre = Usu.Nombre });
         }
-        return usuario;
+        return contraReal;
    } 
 }
