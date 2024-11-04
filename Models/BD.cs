@@ -28,37 +28,33 @@ public static class BD
 
     public static List<Juegos> ObtenerJuegos(){
         List<Juegos> Juego = null;
-
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Juegos";
             Juego = db.Query<Juegos>(sql).ToList();
         }
-
         return Juego;
     }
    public static List<Melodias> ObtenerSonidos()
-{
-    List<Melodias> sonidos = null;
-
-    using(SqlConnection db = new SqlConnection(_connectionString))
     {
-        string sql = "SELECT * FROM Melodias";
-        sonidos = db.Query<Melodias>(sql).ToList();
+        List<Melodias> sonidos = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM Melodias";
+            sonidos = db.Query<Melodias>(sql).ToList();
+        }
+        return sonidos;
     }
-
-    return sonidos;
-}
 
    public static List<Tips> ObtenerTips()
     {
-    List<Tips> tips = null;
+        List<Tips> tips = null;
 
-    using(SqlConnection db = new SqlConnection(_connectionString))
-    {
-        string sql = "SELECT * FROM Tips";
-        tips = db.Query<Tips>(sql).ToList();
-    }
-    return tips;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM Tips";
+            tips = db.Query<Tips>(sql).ToList();
+        }
+        return tips;
    }
     public static void GuardarRecordatorio(Recordatorio Rec){
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -69,7 +65,18 @@ public static class BD
     public static void RecordatorioCompleto(int IdRec){
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "DELETE FROM Recordatorios WHERE id_recordatorio = @pIdRec";
-            db.Execute(sql, new{pIdDeportista = IdDeportista});
+            db.Execute(sql, new{pIdRec = IdRec});
         }
     }
+
+    public static Usuario ObtenerContraseña(Usuario Usu)
+    {
+        Usuario usuario = null;
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM Usuario WHERE Nombre = @pUsu.Nombre";
+            usuario = db.QueryFirstOrDefault<Usuario>(sql);
+        }
+        return usuario;
+   } 
 }

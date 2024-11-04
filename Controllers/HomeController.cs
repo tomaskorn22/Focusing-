@@ -17,9 +17,15 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult InicioSesion()
+    public IActionResult InicioSesion(Usuario usu)
     {
-        return View();
+        UsuarioReal = BD.ObtenerContraseña(Usu);
+        if(usu.Contraseña == UsuarioReal.Contraseña){
+            return View("Index");
+        }
+        else{
+            return View("InicioSesion");
+        }
     }
     public IActionResult AgregarUsuario(Usuario Usu){
         BD.AgregarUsuario(Usu);
@@ -45,7 +51,6 @@ public class HomeController : Controller
     {
         return View();
     }
-
 
     public IActionResult ListaJuegos()
     {
