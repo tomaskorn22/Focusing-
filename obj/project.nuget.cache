@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "2j/j1CA/7afFO+L7c0XY46lXaqYZv4I1scbeOeshEFOM/2qdgax+ic8LN0HmEsVjqpDJdwV5u0np1xqBe1egKg==",
+=======
+  "dgSpecHash": "eX0KSlU/RxkSOuE/KQt5cWjGvRv3tgmnps7xbIIDr8YbrkmnDopz2d29BGV5vL1caKIPCgAkDc6QyEqOeak9GA==",
+>>>>>>> 4522e6e9eae5649b9f7b019c135fc0c168d52d58
   "success": true,
   "projectFilePath": "C:\\Users\\48385206\\Desktop\\Focusing-\\Focusing.csproj",
   "expectedPackageFiles": [
