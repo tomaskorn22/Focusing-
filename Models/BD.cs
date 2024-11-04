@@ -74,8 +74,8 @@ public static class BD
         string contraReal;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Contraseña FROM Usuario WHERE Nombre = @pUsu.Nombre";
-            contraReal = db.QueryFirstOrDefault<string>(sql, new { Nombre = Usu.Nombre });
+            string sql = "SELECT Contraseña FROM Usuarios WHERE Nombre = @pUsu";
+            contraReal = db.QueryFirstOrDefault<string>(sql, new { pUsu = Usu.Nombre });
         }
         return contraReal;
    } 

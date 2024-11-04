@@ -21,7 +21,7 @@ public class HomeController : Controller
     {
         string contraReal = BD.ObtenerContraseña(usu);
         if(usu.Contraseña == contraReal){
-            return View("Index");
+            return View("InicioSesion");
         }
         else{
             return View("InicioSesion");
