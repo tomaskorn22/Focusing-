@@ -58,16 +58,18 @@ public static class BD
         string sql = "SELECT * FROM Tips";
         tips = db.Query<Tips>(sql).ToList();
     }
-
     return tips;
    }
-
-
-
     public static void GuardarRecordatorio(Recordatorio Rec){
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "INSERT INTO Recordatorio (Titulo, Descripcion, Fecha, Categoria) VALUES (@pTitulo, @pDescripcion, @pFecha, @pCategoria)";
             db.Execute(sql, new{pTitulo = Rec.Titulo, pDescripcion = Rec.Descripcion,  pFecha = Rec.Fecha, pCategoria = Rec.Categoria});
+        }
+    }
+    public static void RecordatorioCompleto(int IdRec){
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "DELETE FROM Recordatorios WHERE id_recordatorio = @pIdRec";
+            db.Execute(sql, new{pIdDeportista = IdDeportista});
         }
     }
 }

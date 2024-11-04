@@ -21,9 +21,9 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult CrearCuenta()
-    {
-        return View();
+    public IActionResult AgregarUsuario(Usuario Usu){
+        BD.AgregarUsuario(Usu);
+        return View("Index");
     }
     public IActionResult Tips()
     {
@@ -63,10 +63,14 @@ public class HomeController : Controller
    }
    public IActionResult ListaTips()
    {
-    List<Tips> tips = BD.ObtenerTips();
-    ViewBag.Tips = tips;
-
-    return View("Tips");
+        List<Tips> tips = BD.ObtenerTips();
+        ViewBag.Tips = tips;
+        return View("Tips");
    }
 
+   public IActionResult RecordatorioCompleto(int id_recordatorio)
+    {
+        BD.RecordatorioCompleto(id_recordatorio);
+        return View("Index");
+    }
 }
