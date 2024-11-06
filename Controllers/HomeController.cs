@@ -52,24 +52,24 @@ public class HomeController : Controller
         return View("Perfil");
     }
 
-    public IActionResult ListaJuegos()
+    public IActionResult ListaJuegos(int Id_sentimiento)
     {
-        List<Juegos> juegos = BD.ObtenerJuegos(/*idEmoji*/);
+        List<Juegos> juegos = BD.ObtenerJuegos(Id_sentimiento);
         ViewBag.Juegos = juegos;
 
         return View("Juegos");
     }
-   public IActionResult ListaMelodias()
+   public IActionResult ListaMelodias(int Id_sentimiento)
     {
         
-        List<Melodias> sonidos = BD.ObtenerSonidos(/*idEmoji*/);
+        List<Melodias> sonidos = BD.ObtenerSonidos(Id_sentimiento);
         ViewBag.Sonidos = sonidos;
 
         return View("Sonidos");
     }
-   public IActionResult ListaTips()
+   public IActionResult ListaTips(int Id_sentimiento)
    {
-        List<Tips> tips = BD.ObtenerTips(/*idEmoji*/);
+        List<Tips> tips = BD.ObtenerTips(Id_sentimiento);
         ViewBag.Tips = tips;
         return View("Tips");
    }
