@@ -73,13 +73,11 @@ public class HomeController : Controller
         ViewBag.Tips = tips;
         return View("Tips");
    }
-   public IActionResult ListaSentimientos()
-    {
-        List<Sentimientos> sentimientos = BD.ObtenerSentimientos();
-        ViewBag.Index = sentimientos;
-
-        return View("Index");
-    }
+   public IActionResult ListaSentimientos(int Id_sentimiento)
+   {
+    ViewBag.ListaSentimientos = BD.ObtenerSentimientos(Id_sentimiento);
+    return View("Index");
+   }
 
    public IActionResult RecordatorioCompleto(int id_recordatorio)
     {
