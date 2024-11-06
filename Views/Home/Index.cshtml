@@ -28,19 +28,18 @@
     <h3>¿Cómo te sentís hoy?</h3>
         
     <div class="sentimientos">
-    @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
-    {
-    @foreach (Sentimientos sentimiento in ViewBag.ListaSentimientos)
-    {
-        <ul class="listaImagenes">
-        <li>
-            <p>@sentimiento.foto</p>
-            <p>@sentimiento.nombre</p>
-
-        </li>
-     </ul>   
-    }
-    }
+   @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
+{
+    <ul class="listaImagenes">
+        @foreach (Sentimientos sentimiento in ViewBag.ListaSentimientos)
+        {
+            <li>
+                <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
+                <p>@sentimiento.nombre</p>
+            </li>
+        }
+    </ul>
+}
     </div>
     
     <div class="row">
