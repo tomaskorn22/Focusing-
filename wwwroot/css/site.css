@@ -432,56 +432,65 @@ audio {
 }
 
 /*Calendario*/
-.calendar-container {
+.calendario{
+  display: block;
+  position: relative;
+}
+.calendario .container-flex{
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: stretch;
+}
+.calendario .item-flex{
+  flex-grow: 1;
+  border:solid 1px #ccc;
+  height: 80px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.calendario .cRowControls .currentYear{
+  font-size: 1.1em;
+}
+.calendario .cRowControls .currentMonth{
+  font-size: 1.6em; line-height: 0.8em;
+}
+.calendario .cRowDias{
+  background-color: #999; color:#fff; font-size:1em;
+}
+.calendario .cRowDias .item-flex{
+  padding-top:15px;
+  height: 50px;
+}
+.calendario .cRowDias{
+  background-color: #999; color:#fff; font-size:0.8em;
+}
+.calendario .dia{
+  display: block; clear:both; width:auto; height: auto; min-height:20px; overflot:auto;
+  background-color: #f1f1f1;
+  color:#000; font-size:.75em; text-align:right;
+  border-bottom: 1px solid #ccc;
+  padding-right: 5px;  
+}
+button.badge{
+  border:none;
+  cursor:pointer;
 }
 
-#calendar {
-  margin-left: 20px;
-  width: 70%;
+/* Area del Listado de Eventos */
+.listadoEventos{
+  display: block; position: absolute;
+  left:0; right:0; top:0; bottom:0;
+  z-index: 888;
+  background-color: #f1f1f1;
+  display:none;
+  overflow:auto;
 }
-
-.category-buttons {
-  display: flex;
-  flex-direction: column;
+.btnCloseCalendar{
+  position: absolute;
+  right:5px; top:5px;
 }
-
-.category-btn {
-  padding: 10px;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.category-btn:nth-child(1) { background-color: #FF4D4D; } 
-.category-btn:nth-child(2) { background-color: #4D79FF; } 
-.category-btn:nth-child(3) { background-color: #B84DFF; } 
-.category-btn:nth-child(4) { background-color: #A84D7C; } 
-.category-btn:nth-child(5) { background-color: #4DD2A8; } 
-.category-btn:nth-child(6) { background-color: #FFD700; } 
-
-
-.month-selector {
-  margin-bottom: 10px;
-}
-
-#monthSelect {
-  width: 100px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  font-size: 16px;
-  text-align: center;
-}
-
-#monthSelect:focus {
-  outline: none;
-  border-color: #4D79FF; 
-}
-
 /*Juegos*/
 /* Estilos para el header */
 .header {
