@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Focusing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c353e37e123f54d4e326bcb051db529a2adf0441")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b4a44ecf93edb92dac2e24bcd54144fcd42c59f")]
+>>>>>>> 2be02d5a7ea8d8490a018f1afeb30f6ba3ddec9e
 [assembly: System.Reflection.AssemblyProductAttribute("Focusing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Focusing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

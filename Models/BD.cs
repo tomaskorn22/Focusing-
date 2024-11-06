@@ -26,14 +26,15 @@ public static class BD
         }
     }
 
-    public static List<Juegos> ObtenerJuegos(){
+    public static List<Juegos> ObtenerJuegos(/*int idEmoji*/){
         List<Juegos> Juego = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT * FROM Juegos";
-            Juego = db.Query<Juegos>(sql).ToList();
+            string sql = "SELECT * FROM Juegos WHERE id_juegos = @idEmoji";
+            Juego = db.Query<Juegos>(sql/*, new {@idEmoji = idEmoji}*/).ToList();
         }
         return Juego;
     }
+<<<<<<< HEAD
     public static List<Sentimientos> ObtenerSentimientos(){
         List<Sentimientos> Sentimientos = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -43,24 +44,27 @@ public static class BD
         return Sentimientos;
     }
    public static List<Melodias> ObtenerSonidos()
+=======
+   public static List<Melodias> ObtenerSonidos(/*int idEmoji*/)
+>>>>>>> 2be02d5a7ea8d8490a018f1afeb30f6ba3ddec9e
     {
         List<Melodias> sonidos = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Melodias";
-            sonidos = db.Query<Melodias>(sql).ToList();
+            string sql = "SELECT * FROM Melodias WHERE id_Melodias = @idEmoji";
+            sonidos = db.Query<Melodias>(sql/*, new {@idEmoji = idEmoji}*/).ToList();
         }
         return sonidos;
     }
 
-   public static List<Tips> ObtenerTips()
+   public static List<Tips> ObtenerTips(/*int idEmoji*/)
     {
         List<Tips> tips = null;
 
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Tips";
-            tips = db.Query<Tips>(sql).ToList();
+            string sql = "SELECT * FROM Tips WHERE id_tips = @idEmoji";
+            tips = db.Query<Tips>(sql/*, new {@idEmoji = idEmoji}*/).ToList();
         }
         return tips;
    }
