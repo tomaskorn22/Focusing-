@@ -34,7 +34,7 @@ public static class BD
         }
         return Juego;
     }
-<<<<<<< HEAD
+
     public static List<Sentimientos> ObtenerSentimientos(){
         List<Sentimientos> Sentimientos = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
@@ -43,10 +43,7 @@ public static class BD
         }
         return Sentimientos;
     }
-   public static List<Melodias> ObtenerSonidos()
-=======
    public static List<Melodias> ObtenerSonidos(/*int idEmoji*/)
->>>>>>> 2be02d5a7ea8d8490a018f1afeb30f6ba3ddec9e
     {
         List<Melodias> sonidos = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
