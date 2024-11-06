@@ -33,23 +33,23 @@ public class HomeController : Controller
     }
     public IActionResult Tips()
     {
-        return View();
+        return View("Tips");
     }
     public IActionResult Sonidos()
     {
-        return View();
+        return View("Sonidos");
     }
     public IActionResult Calendario()
     {
-        return View();
+        return View("Calendario");
     }
     public IActionResult Juegos()
     {
-        return View();
+        return View("Juegos");
     }
     public IActionResult Perfil()
     {
-        return View();
+        return View("Perfil");
     }
 
     public IActionResult ListaJuegos()
@@ -68,7 +68,7 @@ public class HomeController : Controller
    }
    public IActionResult ListaTips()
    {
-        List<Tips> tips = BD.ObtenerTips();
+        List<Tips> tips = BD.ObtenerTips(idEmoji);
         ViewBag.Tips = tips;
         return View("Tips");
    }
