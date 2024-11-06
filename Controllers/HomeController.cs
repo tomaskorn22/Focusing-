@@ -54,21 +54,22 @@ public class HomeController : Controller
 
     public IActionResult ListaJuegos()
     {
-        List<Juegos> juegos = BD.ObtenerJuegos();
+        List<Juegos> juegos = BD.ObtenerJuegos(/*idEmoji*/);
         ViewBag.Juegos = juegos;
 
         return View("Juegos");
     }
    public IActionResult ListaMelodias()
-   {
-    List<Melodias> sonidos = BD.ObtenerSonidos();
-    ViewBag.Sonidos = sonidos;
+    {
+        
+        List<Melodias> sonidos = BD.ObtenerSonidos(/*idEmoji*/);
+        ViewBag.Sonidos = sonidos;
 
-    return View("Sonidos");
-   }
+        return View("Sonidos");
+    }
    public IActionResult ListaTips()
    {
-        List<Tips> tips = BD.ObtenerTips(idEmoji);
+        List<Tips> tips = BD.ObtenerTips(/*idEmoji*/);
         ViewBag.Tips = tips;
         return View("Tips");
    }
