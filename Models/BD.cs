@@ -35,7 +35,7 @@ public static class BD
         return Juego;
     }
 
-    public static List<Sentimientos> ObtenerSentimientos(int Id_sentimiento){
+    public static List<Sentimientos> ObtenerSentimientos(){
         List<Sentimientos> Sentimientos = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Sentimientos";

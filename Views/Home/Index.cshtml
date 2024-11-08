@@ -30,8 +30,8 @@
     <div class="sentimientos">
    @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
 {
-    <ul class="listaImagenes">
-        @foreach (Sentimientos sentimiento in ViewBag.ListaSentimientos)
+    <ul class="listaImagenes d-flex">
+        @foreach (Sentimientos sentimiento in ViewBag.Sentimientos)
         {
             <li>
                 <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
