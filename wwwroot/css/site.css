@@ -458,6 +458,7 @@ h2 {
   padding: 10px;
   background-color: #fff;
   border-radius: 5px;
+  
 }
 
 /* Estilo para los nombres de los días */
@@ -468,6 +469,7 @@ h2 {
   padding: 15px 0;
   background-color: #f0f0f0;
   border: 1px solid #ddd;
+  aspect-ratio: 1 / 1;
 }
 
 /* Estilo para cada día */
@@ -478,6 +480,7 @@ h2 {
   border: 1px solid #ddd;
   transition: background-color 0.2s;
   font-size: 18px;
+  aspect-ratio: 1 / 1;
 }
 
 .day:hover {

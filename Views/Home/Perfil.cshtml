@@ -1,10 +1,13 @@
 @{
     ViewData["Title"] = "Perfil";
+    Usuario usuario = ViewBag.Usuario as Usuario;  // Obtener la instancia de Usuario desde ViewBag
 }
+
 <header class="header">
     <div class="logo">
-         <a href='@Url.Action("Index")'>
-        <img src="~/img/logo.png" alt="Logo">
+        <a href='@Url.Action("Index")'>
+            <img src="~/img/logo.png" alt="Logo">
+        </a>
     </div>
     <nav class="nav-menu">
         <a href='@Url.Action("Index")'>Tablero</a>
@@ -18,9 +21,20 @@
     </nav>
     <div class="profile-icon">
         <a href='@Url.Action("InicioSesion")'>
-        <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
+            <img src="~/img/avatar.png" alt="Avatar de Usuario" class="avatar">
         </a>
     </div>
 </header>
+
 <div class="container" style="min-width: 100vw;">
+    @if (usuario != null)
+    {
+        <h2>Bienvenido, @usuario.Nombre @usuario.Apellido</h2>
+        <p><strong>Email:</strong> @usuario.Mail</p>
+        <p><strong>Edad:</strong> @usuario.Edad</p>
+    }
+    else
+    {
+        <p>No se encontró información del usuario.</p>
+    }
 </div>

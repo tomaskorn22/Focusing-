@@ -40,11 +40,13 @@ public class HomeController : Controller
         return Json(eventos);
     }
 
+
     public IActionResult InicioSesion(Usuario usu)
     {
         string contraReal = BD.ObtenerContraseña(usu);
-        if(usu.Contraseña == contraReal){
-            return View("InicioSesion");
+        if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.Mail, usu.Contraseña)){
+            HttpContext.Session.SetString("mail", usu.Mail);
+            return RedirectToAction("Index");
         }
         else{
             return View("InicioSesion");
@@ -53,6 +55,7 @@ public class HomeController : Controller
 
     public IActionResult AgregarUsuario(Usuario Usu){
         BD.AgregarUsuario(Usu);
+
         return View("Index");
     }
 
@@ -65,15 +68,14 @@ public class HomeController : Controller
     {
         return View("Sonidos");
     }
+    public IActionResult CrearCuenta()
+    {
+        return View("CrearCuenta");
+    }
 
     public IActionResult Juegos()
     {
         return View("Juegos");
-    }
-
-    public IActionResult Perfil()
-    {
-        return View("Perfil");
     }
 
     public IActionResult ListaJuegos(int Id_sentimiento)
@@ -104,4 +106,20 @@ public class HomeController : Controller
         BD.RecordatorioCompleto(id_recordatorio);
         return View("Index");
     }
+    public IActionResult Perfil()
+ {
+    string mail = HttpContext.Session.GetString("mail");
+     
+    if (!string.IsNullOrEmpty(mail))
+    {
+        Usuario usuario = new Usuario { Mail = mail };
+        BD.ObtenerDatos(usuario);
+        ViewBag.Usuario = usuario; 
+        return View("Perfil");
+    }
+    else
+    {
+        return RedirectToAction("Index"); 
+    }
+}
 }

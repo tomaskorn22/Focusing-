@@ -5,9 +5,9 @@
         <div class="login-box">
             <div class="left-side">
                 <h2>INGRESAR</h2>
-                <form action="#">
-                    <input type="text" placeholder="Usuario" required>
-                    <input type="password" placeholder="Contraseña" required>
+                <form method="POST" action="@Url.Action("InicioSesion")">
+                    <input type="text" placeholder="Mail" name="Mail" required>
+                    <input type="password" placeholder="Contraseña" name="Contraseña" required>
                     <button type="submit">Ingresar</button>
                     <a href="#" class="forgot-password">¿Olvidaste la contraseña?</a>
                      <a href='@Url.Action("CrearCuenta")' class="create-account">CREAR CUENTA</a>

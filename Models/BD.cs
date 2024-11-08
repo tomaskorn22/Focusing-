@@ -19,12 +19,21 @@ public static class BD
         }
     }
 
-    public static void ObtenerDatos(Usuario Usu){
-        using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
-            db.QueryFirstOrDefault(sql, new{pNombre = Usu});
+    public static void ObtenerDatos(Usuario Usu)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
+        var usuario = db.QueryFirstOrDefault<Usuario>(sql, new { pNombre = Usu.Nombre });
+
+        if (usuario != null)
+        {
+            Usu.Apellido = usuario.Apellido;
+            Usu.Mail = usuario.Mail;
+            Usu.Edad = usuario.Edad;
         }
     }
+}
 
     public static List<Juegos> ObtenerJuegos(int Id_sentimiento){
         List<Juegos> Juego = null;
@@ -92,7 +101,7 @@ public static class BD
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "INSERT INTO Eventos (Titulo, Descripcion, Fecha) VALUES (@pTitulo, @pDescripcion, @pFecha)";
+            string sql = "INSERT INTO Evento (Titulo, Descripcion, Fecha) VALUES (@pTitulo, @pDescripcion, @pFecha)";
             db.Execute(sql, new { pTitulo = evento.Titulo, pDescripcion = evento.Descripcion, pFecha = evento.Fecha });
         }
     }
@@ -106,5 +115,17 @@ public static class BD
             eventos = db.Query<Evento>(sql, new { pFecha = fecha }).ToList();
         }
         return eventos;
+    }
+    public static bool ComprobarUsuarioValido(string mail, string contraseña)
+    {
+        string mensajeSalida;
+
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "EXEC SP_ComprobarUsuarioValido @pmail, @pcontraseña";
+            mensajeSalida = db.QueryFirst<string>(sql, new { pmail = mail, pcontraseña = contraseña });
+        }
+
+        return mensajeSalida == "exitoso";
     }
 }
