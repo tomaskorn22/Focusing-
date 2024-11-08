@@ -88,4 +88,23 @@ public static class BD
         }
         return contraReal;
    } 
+   public static void GuardarEvento(Evento evento)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "INSERT INTO Eventos (Titulo, Descripcion, Fecha) VALUES (@pTitulo, @pDescripcion, @pFecha)";
+            db.Execute(sql, new { pTitulo = evento.Titulo, pDescripcion = evento.Descripcion, pFecha = evento.Fecha });
+        }
+    }
+
+    public static List<Evento> ObtenerEventosPorFecha(DateTime fecha)
+    {
+        List<Evento> eventos = null;
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "SELECT * FROM Eventos WHERE Fecha = @pFecha";
+            eventos = db.Query<Evento>(sql, new { pFecha = fecha }).ToList();
+        }
+        return eventos;
+    }
 }

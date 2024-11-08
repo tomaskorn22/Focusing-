@@ -432,64 +432,140 @@ audio {
 }
 
 /*Calendario*/
-.calendario{
-  display: block;
-  position: relative;
-}
-.calendario .container-flex{
+
+.tips-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: stretch;
-}
-.calendario .item-flex{
-  flex-grow: 1;
-  border:solid 1px #ccc;
-  height: 80px;
-  flex-grow: 1;
-  flex-basis: 0;
-}
-.calendario .cRowControls .currentYear{
-  font-size: 1.1em;
-}
-.calendario .cRowControls .currentMonth{
-  font-size: 1.6em; line-height: 0.8em;
-}
-.calendario .cRowDias{
-  background-color: #999; color:#fff; font-size:1em;
-}
-.calendario .cRowDias .item-flex{
-  padding-top:15px;
-  height: 50px;
-}
-.calendario .cRowDias{
-  background-color: #999; color:#fff; font-size:0.8em;
-}
-.calendario .dia{
-  display: block; clear:both; width:auto; height: auto; min-height:20px; overflot:auto;
-  background-color: #f1f1f1;
-  color:#000; font-size:.75em; text-align:right;
-  border-bottom: 1px solid #ccc;
-  padding-right: 5px;  
-}
-button.badge{
-  border:none;
-  cursor:pointer;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
 }
 
-/* Area del Listado de Eventos */
-.listadoEventos{
-  display: block; position: absolute;
-  left:0; right:0; top:0; bottom:0;
-  z-index: 888;
-  background-color: #f1f1f1;
-  display:none;
-  overflow:auto;
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
 }
-.btnCloseCalendar{
-  position: absolute;
-  right:5px; top:5px;
+
+/* Estilos del calendario */
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Estilo para los nombres de los días */
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  color: #2f4f6f;
+  padding: 15px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para cada día */
+.day {
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s;
+  font-size: 18px;
+}
+
+.day:hover {
+  background-color: #f0f8ff;
+}
+
+/* Estilo para el día actual */
+.day.current-day {
+  background-color: #2f4f6f;
+  color: white;
+  font-weight: bold;
+}
+
+/* Formulario de evento */
+.event-form {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.event-form h3 {
+  margin-top: 0;
+}
+
+.event-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.event-form input, .event-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.event-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2f4f6f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.event-form button:hover {
+  background-color: #1f3b4f;
+}
+
+/* Modal de eventos */
+#eventModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 1000;
+  display: none;
+}
+
+#eventModal h3 {
+  margin-top: 0;
+}
+
+#eventList p {
+  margin: 10px 0;
+}
+
+#eventModal button {
+  background-color: #2f4f6f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#eventModal button:hover {
+  background-color: #1f3b4f;
 }
 /*Juegos*/
 /* Estilos para el header */

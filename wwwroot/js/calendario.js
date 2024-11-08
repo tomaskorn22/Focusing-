@@ -1,6 +1,5 @@
 // Variables de configuración del calendario
 const calendar = document.getElementById("calendar");
-const monthSelect = document.getElementById("monthSelect");
 const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
@@ -11,38 +10,55 @@ function generateCalendar(month, year) {
     const firstDay = new Date(year, month).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Tabla de calendario
-    let table = "<table border='1' style='width: 100%; text-align: center;'><tr>";
     // Días de la semana
+    let table = "<div class='week'>";
     const daysOfWeek = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
     for (let day of daysOfWeek) {
-        table += `<th>${day}</th>`;
+        table += `<div class='day-name'>${day}</div>`;
     }
-    table += "</tr><tr>";
+    table += "</div><div class='week'>";
 
     // Espacios en blanco antes del primer día
     for (let i = 0; i < firstDay; i++) {
-        table += "<td></td>";
+        table += "<div class='day'></div>";
     }
 
     // Días del mes
     for (let day = 1; day <= daysInMonth; day++) {
-        if ((day + firstDay - 1) % 7 === 0) table += "</tr><tr>"; // Nueva fila para cada semana
-        table += `<td>${day}</td>`;
+        if ((day + firstDay - 1) % 7 === 0 && day > 1) table += "</div><div class='week'>"; // Nueva fila para cada semana
+        table += `<div class='day' onclick="abrirFormularioEvento('${year}-${month + 1}-${day}')">${day}</div>`;
     }
 
-    table += "</tr></table>";
-    calendar.innerHTML += table;
+    table += "</div>";
+    calendar.innerHTML = table;
 }
 
-// Función para manejar el cambio de mes
-function changeMonth() {
-    currentMonth = parseInt(monthSelect.value); // Obtener el mes seleccionado
-    generateCalendar(currentMonth, currentYear); // Actualizar el calendario
+// Función para abrir el formulario de evento
+function abrirFormularioEvento(fecha) {
+    document.getElementById('Fecha').value = fecha;
+    document.querySelector(".event-form").style.display = 'block';
 }
 
-// Generar el calendario del mes actual al cargar la página
+// Función para consultar eventos del día
+function consultarEventosDelDia(fecha) {
+    fetch(`/Home/ObtenerEventos?fecha=${fecha}`)
+        .then(response => response.json())
+        .then(eventos => {
+            let eventList = document.getElementById('eventList');
+            eventList.innerHTML = '';
+            eventos.forEach(evento => {
+                eventList.innerHTML += `<p><strong>${evento.Titulo}</strong>: ${evento.Descripcion}</p>`;
+            });
+            document.getElementById('eventModal').style.display = 'block';
+        });
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+    document.getElementById('eventModal').style.display = 'none';
+}
+
+// Generar el calendario al cargar la página
 document.addEventListener("DOMContentLoaded", () => {
-    monthSelect.value = currentMonth; // Establecer el mes actual en el selector
     generateCalendar(currentMonth, currentYear);
 });
