@@ -4,12 +4,12 @@
 <div class="register-container" style="min-width: 100vw;">
     <div class="register-box">
         <h2>BIENVENIDO/A A FOCUSING!</h2>
-        <form action="#">
-            <input type="text" placeholder="Nombre completo" required>
-            <input type="password" placeholder="Contraseña" required>
-            <input type="email" placeholder="Correo electrónico" required>
-            <input type="text" placeholder="Fecha de Nacimiento (DD/MM/AAAA)" required>
-            <input type="text" placeholder="Escuela" required>
+        <form action='@Url.Action("AgregarUsuario")'>
+            <input type="text" name="Nombre" placeholder="Nombre" required>
+            <input type="text" name="Apellido" placeholder="Apellido" required>
+            <input type="password" name="Contraseña" placeholder="Contraseña" required>
+            <input type="email" name="Email" placeholder="Correo electrónico" required>
+            <input type="text" name="edad" placeholder="Edad" required>
             <button type="submit" class="submit-btn">Siguiente</button>
         </form>
     </div>

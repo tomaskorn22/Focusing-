@@ -18,6 +18,10 @@ public class HomeController : Controller
         ViewBag.Sentimientos = BD.ObtenerSentimientos();
         return View();
     }
+
+    public IActionResult CrearCuenta(){
+        return View();
+    }
     public IActionResult InicioSesion(Usuario usu)
     {
         string contraReal = BD.ObtenerContraseña(usu);
@@ -28,8 +32,17 @@ public class HomeController : Controller
             return View("InicioSesion");
         }
     }
-    public IActionResult AgregarUsuario(Usuario Usu){
-        BD.AgregarUsuario(Usu);
+    public IActionResult AgregarUsuario(string Nombre, string Apellido, string Email, string Contraseña, int edad){
+        Usuario usu = new Usuario(){
+            Nombre = Nombre,
+            Apellido = Apellido,
+            Mail = Email,
+            Contraseña = Contraseña,
+            Edad = edad
+        };
+        
+
+        BD.AgregarUsuario(usu);
         return View("Index");
     }
     public IActionResult Tips()

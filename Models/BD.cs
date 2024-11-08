@@ -7,7 +7,7 @@ public static class BD
 
     public static void AgregarUsuario(Usuario Usu){
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "INSERT INTO Usuarios (Nombre, Apellido, Mail, Contraseña, Edad) VALUES (@pNombre, @pApellido, @pMail, @pConraseña, @pEdad)";
+            string sql = "INSERT INTO Usuarios (Nombre, Apellido, Mail, Contraseña, Edad) VALUES (@pNombre, @pApellido, @pMail, @pContraseña, @pEdad)";
             db.Execute(sql, new{pNombre = Usu.Nombre, pApellido = Usu.Apellido,  pMail = Usu.Mail, pContraseña = Usu.Contraseña, pEdad = Usu.Edad});
         }
     }
