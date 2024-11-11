@@ -10,6 +10,14 @@ function generateCalendar(month, year) {
     const firstDay = new Date(year, month).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
+    // Agregar el encabezado del mes y año
+    let header = `<div class="calendar-header">
+                    <button onclick="changeMonth(-1)">&#10094;</button>
+                    <span>${monthNames[month]} ${year}</span>
+                    <button onclick="changeMonth(1)">&#10095;</button>
+                  </div>`;
+    calendar.innerHTML = header;
+
     // Días de la semana
     let table = "<div class='week'>";
     const daysOfWeek = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
@@ -30,7 +38,20 @@ function generateCalendar(month, year) {
     }
 
     table += "</div>";
-    calendar.innerHTML = table;
+    calendar.innerHTML += table;
+}
+
+// Función para cambiar el mes
+function changeMonth(step) {
+    currentMonth += step;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    } else if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    generateCalendar(currentMonth, currentYear);
 }
 
 // Función para abrir el formulario de evento
