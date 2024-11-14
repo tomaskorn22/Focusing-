@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1/Wm1vXSNyKj1JYGuYOUGCuDkBWy/pjX3e5MN9ukUfw=",
+  "Hash": "H18eZcvnx3ijQnhJIAXkOl6hPOpaq08W6OjPTGglf2o=",
   "Source": "Focusing",
   "BasePath": "_content/Focusing",
   "Mode": "Default",
@@ -376,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\calendario.js"
+    },
+    {
+      "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\contador.js",
+      "SourceId": "Focusing",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\",
+      "BasePath": "_content/Focusing",
+      "RelativePath": "js/contador.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\contador.js"
     },
     {
       "Identity": "C:\\Users\\48242157\\Downloads\\Focusing-\\wwwroot\\js\\site.js",
