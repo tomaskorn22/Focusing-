@@ -1,5 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Index";
+    Usuario usuario = ViewBag.Usuario as Usuario;  
+
 }
 <header class="header">
     <div class="logo">
@@ -31,13 +33,21 @@
    @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
 {
     <ul class="listaImagenes d-flex">
-        @foreach (Sentimientos sentimiento in ViewBag.Sentimientos)
-        {
-            <li>
-                <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
-                <p>@sentimiento.nombre</p>
-            </li>
-        }
+       <ul>
+    @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
+    {
+        <li>
+            <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
+            <p>@sentimiento.nombre</p>
+            <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "SentimientosXUsuarios")'>
+                <input type="hidden" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
+                <input type="hidden" name="id_usuario" value="@usuario.id_usuario" />
+                <button type="submit">Guardar Sentimiento</button>
+            </form>
+        </li>
+    }
+</ul>
+
     </ul>
 }
     </div>

@@ -46,6 +46,7 @@ public class HomeController : Controller
         string contraReal = BD.ObtenerContraseña(usu);
         if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.Mail, usu.Contraseña)){
             HttpContext.Session.SetString("mail", usu.Mail);
+            ViewBag.Usuario = usu;
             return RedirectToAction("Index");
         }
         else{
@@ -122,4 +123,15 @@ public class HomeController : Controller
         return RedirectToAction("Index"); 
     }
 }
+
+[HttpPost]
+    public IActionResult GuardarSentimientosPorUsuario(int Id_usuario, int Id_sentimiento)
+    {
+
+    BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
+
+        return RedirectToAction("Index", "Home");
+    }
+
+
 }

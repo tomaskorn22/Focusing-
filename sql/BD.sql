@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Focusing Empowering Minds]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Database [Focusing Empowering Minds]    Script Date: 14/11/2024 13:52:08 ******/
 CREATE DATABASE [Focusing Empowering Minds]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [Focusing Empowering Minds] SET QUERY_STORE = OFF
 GO
 USE [Focusing Empowering Minds]
 GO
-/****** Object:  User [alumno]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  User [alumno]    Script Date: 14/11/2024 13:52:09 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Calendario]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Calendario]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[Calendario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Evento]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Evento]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +128,7 @@ CREATE TABLE [dbo].[Evento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Foro]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Foro]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[Foro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Juegos]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Juegos]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -160,7 +160,7 @@ CREATE TABLE [dbo].[Juegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Melodias]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Melodias]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ CREATE TABLE [dbo].[Melodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Recordatorio]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Recordatorio]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -193,7 +193,7 @@ CREATE TABLE [dbo].[Recordatorio](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sentimientos]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Sentimientos]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -208,7 +208,7 @@ CREATE TABLE [dbo].[Sentimientos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXJuegos]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[SentimientosXJuegos]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -223,7 +223,7 @@ CREATE TABLE [dbo].[SentimientosXJuegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXMelodias]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[SentimientosXMelodias]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -238,7 +238,7 @@ CREATE TABLE [dbo].[SentimientosXMelodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXTips]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[SentimientosXTips]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -253,7 +253,22 @@ CREATE TABLE [dbo].[SentimientosXTips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tips]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[SentimientosXUsuarios]    Script Date: 14/11/2024 13:52:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[SentimientosXUsuarios](
+	[Id_sentimientosXUsuarios] [int] IDENTITY(1,1) NOT NULL,
+	[Id_sentimiento] [int] NULL,
+	[Id_usuario] [int] NULL,
+ CONSTRAINT [PK_SentimientosXUsuarios] PRIMARY KEY CLUSTERED 
+(
+	[Id_sentimientosXUsuarios] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tips]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -268,7 +283,7 @@ CREATE TABLE [dbo].[Tips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 11/11/2024 08:49:13 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -406,7 +421,21 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[SentimientosXTips] CHECK CONSTRAINT [FK_SentimientosXTips_Tips]
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ComprobarUsuarioValido]    Script Date: 11/11/2024 08:49:13 ******/
+ALTER TABLE [dbo].[SentimientosXUsuarios]  WITH CHECK ADD  CONSTRAINT [FK_SentimientosXUsuarios_Sentimientos] FOREIGN KEY([Id_sentimiento])
+REFERENCES [dbo].[Sentimientos] ([Id_sentimiento])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[SentimientosXUsuarios] CHECK CONSTRAINT [FK_SentimientosXUsuarios_Sentimientos]
+GO
+ALTER TABLE [dbo].[SentimientosXUsuarios]  WITH CHECK ADD  CONSTRAINT [FK_SentimientosXUsuarios_Usuarios] FOREIGN KEY([Id_usuario])
+REFERENCES [dbo].[Usuarios] ([Id_usuario])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[SentimientosXUsuarios] CHECK CONSTRAINT [FK_SentimientosXUsuarios_Usuarios]
+GO
+/****** Object:  StoredProcedure [dbo].[SP_ComprobarUsuarioValido]    Script Date: 14/11/2024 13:52:09 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

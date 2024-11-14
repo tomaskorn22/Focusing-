@@ -128,4 +128,14 @@ public static class BD
 
         return mensajeSalida == "exitoso";
     }
+    public static void GuardarSentimientoPorUsuario(int Id_usuario, int Id_sentimiento)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = "INSERT INTO SentimientosXUsuarios (Id_usuario, Id_sentimiento) VALUES (@pId_usuario, @pId_sentimiento)";
+        
+        db.Execute(sql, new { pId_usuario = Id_usuario, pId_sentimiento = Id_sentimiento });
+    }
+}
+
 }
