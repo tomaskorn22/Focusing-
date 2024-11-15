@@ -79,7 +79,7 @@ public class HomeController : Controller
     }
     public IActionResult CrearCuenta()
     {
-        return View("CrearCuenta");
+        return RedirectToAction("InicioSesion");
     }
 
     public IActionResult Juegos()
