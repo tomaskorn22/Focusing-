@@ -14,10 +14,17 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
+  {
+    ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
+    if (ViewBag.User is null)
     {
-        ViewBag.Sentimientos = BD.ObtenerSentimientos();
-        return View();
+        return RedirectToAction("InicioSesion");
     }
+
+    ViewBag.Sentimientos = BD.ObtenerSentimientos();
+    return View();
+   }
+
 
     public IActionResult Calendario()
     {
@@ -40,20 +47,21 @@ public class HomeController : Controller
         return Json(eventos);
     }
 
-
+    
     public IActionResult InicioSesion(Usuario usu)
+{
+    string contraReal = BD.ObtenerContraseña(usu);
+    if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.Mail, usu.Contraseña))
     {
-        string contraReal = BD.ObtenerContraseña(usu);
-        if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.Mail, usu.Contraseña)){
-            HttpContext.Session.SetString("mail", usu.Mail);
-            ViewBag.Usuario = usu;
-            return RedirectToAction("Index");
-        }
-        else{
-            return View("InicioSesion");
-        }
+        HttpContext.Session.SetString("mail", usu.Mail);
+        ViewBag.Usuario = usu;
+        return RedirectToAction("Index");
     }
-
+    else
+    {
+        return View("InicioSesion");
+    }
+}
     public IActionResult AgregarUsuario(Usuario Usu){
         BD.AgregarUsuario(Usu);
 
@@ -124,14 +132,13 @@ public class HomeController : Controller
     }
 }
 
-[HttpPost]
+    [HttpPost]
     public IActionResult GuardarSentimientosPorUsuario(int Id_usuario, int Id_sentimiento)
     {
-
     BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
-
-        return RedirectToAction("Index", "Home");
+    return RedirectToAction("Index", "Home");
     }
+
 
 
 }
