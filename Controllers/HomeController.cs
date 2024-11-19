@@ -18,10 +18,10 @@ public class HomeController : Controller
     ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
     if (ViewBag.User is null)
     {
-        return RedirectToAction("InicioSesion");
+        return View("Index");
     }
 
-    ViewBag.Sentimientos = BD.ObtenerSentimientos();
+    ViewBag.Sentimientos = BD.ObtenerSentimientos() ?? new List<Sentimientos>();
     return View();
    }
 
@@ -55,7 +55,7 @@ public class HomeController : Controller
     {
         HttpContext.Session.SetString("mail", usu.Mail);
         ViewBag.Usuario = usu;
-        return RedirectToAction("Index");
+        return View("Index");
     }
     else
     {
@@ -79,7 +79,7 @@ public class HomeController : Controller
     }
     public IActionResult CrearCuenta()
     {
-        return RedirectToAction("InicioSesion");
+        return View("CrearCuenta");
     }
 
     public IActionResult Juegos()

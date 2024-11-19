@@ -24,7 +24,7 @@ public static class BD
     using (SqlConnection db = new SqlConnection(_connectionString))
     {
         string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
-        var usuario = db.QueryFirstOrDefault<Usuario>(sql, new { pNombre = Usu.Nombre });
+        Usuario usuario = db.QueryFirstOrDefault<Usuario>(sql, new { pNombre = Usu.Nombre });
 
         if (usuario != null)
         {
