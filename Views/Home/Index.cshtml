@@ -31,23 +31,26 @@
     <div class="sentimientos">
         @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
         {
-            <ul class="listaImagenes d-flex">
-                @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
-                {
-                    <li>
-                        <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
-                        <p>@sentimiento.nombre</p>
-                        @if (ViewBag.User != null)
-                        {
-                            <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "SentimientosXUsuarios")'>
-                                <input type="hidden" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
-                                <input type="hidden" name="id_usuario" value="@usuario.id_usuario" />
-                                <button type="submit">Guardar Sentimiento</button>
-                            </form>
-                        }
-                    </li>
-                } 
-            </ul>
+            <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "Home")'>
+                <ul class="listaImagenes d-flex">
+                    @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
+                    {
+                        <li>
+                            <label>
+                                <input type="checkbox" name="Id_sentimientos" value="@sentimiento.Id_sentimiento" />
+                                <img src="@sentimiento.foto" alt="@sentimiento.nombre" />
+                                <p>@sentimiento.nombre</p>
+                            </label>
+                        </li>
+                    }
+                </ul>
+                <input type="hidden" name="Id_usuario" value="@usuario?.id_usuario" />
+                <button type="submit" class="btn btn-primary">Guardar Selección</button>
+            </form>
+        }
+        else
+        {
+            <p>No hay sentimientos disponibles para seleccionar.</p>
         }
     </div>
     
