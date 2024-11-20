@@ -14,15 +14,16 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-  {
-    ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
-    if (ViewBag.User is null)
     {
-        return View("Index");
-    }
+        ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
+        ViewBag.Sentimientos = BD.ObtenerSentimientos();
+        
+        if (ViewBag.User is null)
+        {
+            return View("Index");
+        }
 
-    ViewBag.Sentimientos = BD.ObtenerSentimientos() ?? new List<Sentimientos>();
-    return View();
+        return View();
    }
 
 

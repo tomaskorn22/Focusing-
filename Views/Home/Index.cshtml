@@ -1,8 +1,7 @@
 ﻿@{
-    ViewData["Title"] = "Index";
     Usuario usuario = ViewBag.Usuario as Usuario;  
-
 }
+
 <header class="header">
     <div class="logo">
          <a href='@Url.Action("Index")'>
@@ -30,26 +29,26 @@
     <h3>¿Cómo te sentís hoy?</h3>
         
     <div class="sentimientos">
-   @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
-{
-    <ul class="listaImagenes d-flex">
-       <ul>
-    @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
-    {
-        <li>
-            <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
-            <p>@sentimiento.nombre</p>
-            <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "SentimientosXUsuarios")'>
-                <input type="hidden" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
-                <input type="hidden" name="id_usuario" value="@usuario.id_usuario" />
-                <button type="submit">Guardar Sentimiento</button>
-            </form>
-        </li>
-    }
-</ul>
-
-    </ul>
-}
+        @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
+        {
+            <ul class="listaImagenes d-flex">
+                @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
+                {
+                    <li>
+                        <img src="@sentimiento.foto" alt="@sentimiento.nombre" style="max-width: 100px; height: auto;" />
+                        <p>@sentimiento.nombre</p>
+                        @if (ViewBag.User != null)
+                        {
+                            <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "SentimientosXUsuarios")'>
+                                <input type="hidden" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
+                                <input type="hidden" name="id_usuario" value="@usuario.id_usuario" />
+                                <button type="submit">Guardar Sentimiento</button>
+                            </form>
+                        }
+                    </li>
+                } 
+            </ul>
+        }
     </div>
     
     <div class="row">
