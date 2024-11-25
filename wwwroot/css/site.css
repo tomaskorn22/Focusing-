@@ -45,7 +45,7 @@ body {
   width: 400px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 20px; /* Para separar del header */
+  margin-top: 25px; /* Para separar del header */
 }
 
 .logo img {
@@ -55,7 +55,7 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-menu a {
@@ -71,7 +71,7 @@ body {
 .profile-icon img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 55%;
 }
 
 .sentimientos {
