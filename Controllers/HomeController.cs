@@ -22,7 +22,6 @@ public class HomeController : Controller
         {
             return View("Index");
         }
-
         return View();
    }
 
@@ -47,7 +46,6 @@ public class HomeController : Controller
         var eventos = BD.ObtenerEventosPorFecha(fecha); // Llama a la base de datos para obtener eventos por fecha
         return Json(eventos);
     }
-
     
     public IActionResult InicioSesion(Usuario usu)
 {
@@ -139,7 +137,4 @@ public class HomeController : Controller
     BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
     return RedirectToAction("Index", "Home");
     }
-
-
-
 }
