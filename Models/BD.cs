@@ -132,8 +132,8 @@ public static class BD
 {
     using (SqlConnection db = new SqlConnection(_connectionString))
     {
-        string sql = "INSERT INTO Usuarios (Id_sentimiento) VALUES ( @pId_sentimiento)";
-        db.Execute(sql, new { pId_sentimiento = Id_sentimiento });
+        string sql = "UPDATE Usuarios SET Id_sentimiento = @pId_sentimiento WHERE Id_usuario = @pId_usuario";
+        db.Execute(sql, new { pId_sentimiento = Id_sentimiento, pId_usuario = Id_usuario });
     }
 }
 
