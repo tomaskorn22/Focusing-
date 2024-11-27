@@ -7,8 +7,8 @@ public static class BD
 
     public static void AgregarUsuario(Usuario Usu){
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "INSERT INTO Usuarios (Nombre, Apellido, Mail, Contraseña, Edad) VALUES (@pNombre, @pApellido, @pMail, @pContraseña, @pEdad)";
-            db.Execute(sql, new{pNombre = Usu.Nombre, pApellido = Usu.Apellido,  pMail = Usu.Mail, pContraseña = Usu.Contraseña, pEdad = Usu.Edad});
+            string sql = "INSERT INTO Usuarios (nombre, apellido, mail, contraseña, edad) VALUES (@pNombre, @pApellido, @pMail, @pContraseña, @pEdad)";
+            db.Execute(sql, new{pNombre = Usu.nombre, pApellido = Usu.apellido,  pMail = Usu.mail, pContraseña = Usu.contraseña, pEdad = Usu.edad});
         }
     }
 
@@ -23,14 +23,14 @@ public static class BD
 {
     using (SqlConnection db = new SqlConnection(_connectionString))
     {
-        string sql = "SELECT * FROM Usuarios WHERE Nombre = @pNombre";
-        Usuario usuario = db.QueryFirstOrDefault<Usuario>(sql, new { pNombre = Usu.Nombre });
+        string sql = "SELECT * FROM Usuarios WHERE Id_usuario = @Id_usuario";
+        Usuario usuario = db.QueryFirstOrDefault<Usuario>(sql, new { Id_usuario = Usu.Id_usuario });
 
         if (usuario != null)
         {
-            Usu.Apellido = usuario.Apellido;
-            Usu.Mail = usuario.Mail;
-            Usu.Edad = usuario.Edad;
+            Usu.apellido = usuario.apellido;
+            Usu.mail = usuario.mail;
+            Usu.edad = usuario.edad;
         }
     }
 }
@@ -38,7 +38,7 @@ public static class BD
     public static List<Juegos> ObtenerJuegos(int Id_sentimiento){
         List<Juegos> Juego = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
-            string sql = "SELECT * FROM Juegos WHERE id_juegos = @Id_sentimiento";
+            string sql = "SELECT * FROM Juegos WHERE Id_sentimiento = @Id_sentimiento";
             Juego = db.Query<Juegos>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
         }
         return Juego;
@@ -57,7 +57,7 @@ public static class BD
         List<Melodias> sonidos = null;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Melodias WHERE id_Melodias = @Id_sentimiento";
+            string sql = "SELECT * FROM Melodias WHERE Id_sentimiento = @Id_sentimiento";
             sonidos = db.Query<Melodias>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
         }
         return sonidos;
@@ -69,7 +69,7 @@ public static class BD
 
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Tips WHERE id_tips = @Id_sentimiento";
+            string sql = "SELECT * FROM Tips WHERE Id_sentimiento = @Id_sentimiento";
             tips = db.Query<Tips>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
         }
         return tips;
@@ -92,8 +92,8 @@ public static class BD
         string contraReal;
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = "SELECT Contraseña FROM Usuarios WHERE Nombre = @pUsu";
-            contraReal = db.QueryFirstOrDefault<string>(sql, new { pUsu = Usu.Nombre });
+            string sql = "SELECT Contraseña FROM Usuarios WHERE nombre = @pUsu";
+            contraReal = db.QueryFirstOrDefault<string>(sql, new { pUsu = Usu.nombre });
         }
         return contraReal;
    } 
@@ -129,12 +129,12 @@ public static class BD
         return mensajeSalida == "exitoso";
     }
     public static void GuardarSentimientoPorUsuario(int Id_usuario, int Id_sentimiento)
-{
+    {
     using (SqlConnection db = new SqlConnection(_connectionString))
     {
         string sql = "UPDATE Usuarios SET Id_sentimiento = @pId_sentimiento WHERE Id_usuario = @pId_usuario";
         db.Execute(sql, new { pId_sentimiento = Id_sentimiento, pId_usuario = Id_usuario });
     }
-}
+    }
 
 }

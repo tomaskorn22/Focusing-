@@ -1,26 +1,35 @@
+using System;
+using System.Text.Json;
+
+[Serializable]
 public class Usuario
 {
-    public int id_usuario {get;set;}
-    public string Nombre { get; set; }
-    public string Apellido { get; set; }
-    public string Mail { get; set; }
-    public string Contraseña { get; set; }
-    public int  Edad { get; set; }
+    public int Id_usuario { get; set; }
+    public string nombre { get; set; }
+    public string apellido { get; set; }
+    public string mail { get; set; }
+    public string contraseña { get; set; }
+    public int edad { get; set; }
 
-
-public static Usuario FromString(string userData)
+    // Constructor tradicional
+    public Usuario(string mail, string contraseña)
     {
-        if (string.IsNullOrEmpty(userData)) return null;
-
-        return System.Text.Json.JsonSerializer.Deserialize<Usuario>(userData);
+        this.mail = mail;
+        this.contraseña = contraseña;
     }
 
-    
-public string ToJson()
+    public override string ToString()
     {
-        return System.Text.Json.JsonSerializer.Serialize(this);
+        return JsonSerializer.Serialize(this);
     }
 
+    public static Usuario? FromString(string? json)
+    {
+        if (json is null)
+        {
+            return null;
+        }
 
-
+        return JsonSerializer.Deserialize<Usuario>(json);
+    }
 }

@@ -37,15 +37,19 @@
                     {
                         <li>
                             <label>
-                                <input type="checkbox" name="Id_sentimientos" value="@sentimiento.Id_sentimiento" />
+                                <input type="checkbox" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
                                 <img src="@sentimiento.foto" alt="@sentimiento.nombre" />
                                 <p>@sentimiento.nombre</p>
                             </label>
                         </li>
                     }
                 </ul>
-                <input type="hidden" name="Id_usuario" value="@usuario?.id_usuario" />
-                <button type="submit" class="btn btn-primary">Guardar Selección</button>
+                @if(usuario != null) {
+                    <input type="hidden" name="Id_usuario" value="@usuario.Id_usuario" />
+                    <button type="submit" class="btn btn-primary">Guardar Selección</button>
+                } else {
+                    <p>Para guardar tu sentimiento, logueate</p>
+                }
             </form>
         }
         else

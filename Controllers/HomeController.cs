@@ -18,9 +18,9 @@ public class HomeController : Controller
         ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
         ViewBag.Sentimientos = BD.ObtenerSentimientos();
         
-        if (ViewBag.User is null)
-        {
-            return View("Index");
+        if (ViewBag.User != null)
+        {   
+            ViewBag.id_usuario =  ViewBag.User.id_usuario;
         }
         return View();
    }
@@ -50,11 +50,11 @@ public class HomeController : Controller
     public IActionResult InicioSesion(Usuario usu)
 {
     string contraReal = BD.ObtenerContraseña(usu);
-    if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.Mail, usu.Contraseña))
+    if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.mail, usu.contraseña))
     {
-        HttpContext.Session.SetString("mail", usu.Mail);
-        ViewBag.Usuario = usu;
-        return View("Index");
+        HttpContext.Session.SetString("user", new Usuario(mail, contraseña).ToString());
+        ViewBag.UserId = usu.Id_usuario;
+        return RedirectToAction("Index");
     }
     else
     {
@@ -63,12 +63,13 @@ public class HomeController : Controller
 }
     public IActionResult AgregarUsuario(Usuario Usu){
         BD.AgregarUsuario(Usu);
-
+        ViewBag.UserId = Usu.Id_usuario;
         return View("Index");
     }
 
-    public IActionResult Tips()
+    public IActionResult Tips(int Id_sentimiento)
     {
+        ViewBag.Tips = BD.ObtenerTips(Id_sentimiento);
         return View("Tips");
     }
 
@@ -120,7 +121,7 @@ public class HomeController : Controller
      
     if (!string.IsNullOrEmpty(mail))
     {
-        Usuario usuario = new Usuario { Mail = mail };
+        Usuario usuario = new Usuario { mail = mail };
         BD.ObtenerDatos(usuario);
         ViewBag.Usuario = usuario; 
         return View("Perfil");
@@ -134,6 +135,7 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult GuardarSentimientosPorUsuario(int Id_usuario, int Id_sentimiento)
     {
+        Console.WriteLine(Id_usuario + "" +Id_sentimiento );
     BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
     return RedirectToAction("Index", "Home");
     }
