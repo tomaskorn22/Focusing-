@@ -56,7 +56,6 @@ C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.csproj.CoreCompi
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.RazorAssemblyInfo.cache
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.RazorAssemblyInfo.cs
-C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.sourcelink.json
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets\msbuild.Focusing.Microsoft.AspNetCore.StaticWebAssets.props
@@ -65,7 +64,6 @@ C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets\msbuild.b
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Focusing.props
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\staticwebassets.pack.json
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\scopedcss\bundle\Focusing.styles.css
-C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.csproj.Up2Date
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.dll
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\refint\Focusing.dll
 C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.pdb
@@ -145,3 +143,4 @@ C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\refint\Focusing.dll
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\Focusing.pdb
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\Focusing.genruntimeconfig.cache
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\ref\Focusing.dll
+C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.csproj.CopyComplete

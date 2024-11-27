@@ -18,6 +18,9 @@ public class Usuario
         this.contraseña = contraseña;
     }
 
+    // Constructor sin parámetros (requerido para la serialización/deserialización)
+    public Usuario() { }
+
     public override string ToString()
     {
         return JsonSerializer.Serialize(this);
@@ -25,7 +28,7 @@ public class Usuario
 
     public static Usuario? FromString(string? json)
     {
-        if (json is null)
+        if (string.IsNullOrEmpty(json))
         {
             return null;
         }

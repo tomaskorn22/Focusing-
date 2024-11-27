@@ -19,8 +19,21 @@ public static class BD
         }
     }
 
-    public static void ObtenerDatos(Usuario Usu)
+    public static int ObtenerIdUsuario(string mail)
 {
+    const string sql = "SELECT Id_usuario FROM Usuarios WHERE mail = @mail";
+    int usuario;
+
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        
+        usuario = db.QueryFirstOrDefault<int>(sql, new { mail = mail });
+    }
+
+    return usuario;
+}
+    public static void ObtenerDatos(Usuario Usu)
+  {
     using (SqlConnection db = new SqlConnection(_connectionString))
     {
         string sql = "SELECT * FROM Usuarios WHERE Id_usuario = @Id_usuario";
@@ -33,9 +46,10 @@ public static class BD
             Usu.edad = usuario.edad;
         }
     }
-}
+  }
 
-    public static List<Juegos> ObtenerJuegos(int Id_sentimiento){
+    public static List<Juegos> ObtenerJuegos(int Id_sentimiento)
+    {
         List<Juegos> Juego = null;
         using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Juegos WHERE Id_sentimiento = @Id_sentimiento";
@@ -130,11 +144,10 @@ public static class BD
     }
     public static void GuardarSentimientoPorUsuario(int Id_usuario, int Id_sentimiento)
     {
-    using (SqlConnection db = new SqlConnection(_connectionString))
-    {
-        string sql = "UPDATE Usuarios SET Id_sentimiento = @pId_sentimiento WHERE Id_usuario = @pId_usuario";
-        db.Execute(sql, new { pId_sentimiento = Id_sentimiento, pId_usuario = Id_usuario });
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = "UPDATE Usuarios SET Id_sentimiento = @pId_sentimiento WHERE Id_usuario = @pId_usuario";
+            db.Execute(sql, new { pId_sentimiento = Id_sentimiento, pId_usuario = Id_usuario });
+        }
     }
-    }
-
 }

@@ -47,13 +47,15 @@ public class HomeController : Controller
         return Json(eventos);
     }
     
-    public IActionResult InicioSesion(Usuario usu)
+    public IActionResult InicioSesion(string? mail, string? contraseña)
 {
-    string contraReal = BD.ObtenerContraseña(usu);
-    if (HttpContext.Request.Method == "POST" && BD.ComprobarUsuarioValido(usu.mail, usu.contraseña))
+    //string contraReal = BD.ObtenerContraseña(mail,contraseña);
+    int idUsuario;
+    if (HttpContext.Request.Method == "POST" && mail != null && contraseña != null && BD.ComprobarUsuarioValido(mail,contraseña))
     {
-        HttpContext.Session.SetString("user", new Usuario(mail, contraseña).ToString());
-        ViewBag.UserId = usu.Id_usuario;
+        idUsuario = BD.ObtenerIdUsuario(mail);
+        HttpContext.Session.SetInt32("user", idUsuario);
+        ViewBag.UserId = idUsuario;
         return RedirectToAction("Index");
     }
     else
@@ -116,20 +118,21 @@ public class HomeController : Controller
         return View("Index");
     }
     public IActionResult Perfil()
- {
-    string mail = HttpContext.Session.GetString("mail");
-     
-    if (!string.IsNullOrEmpty(mail))
     {
-        Usuario usuario = new Usuario { mail = mail };
-        BD.ObtenerDatos(usuario);
-        ViewBag.Usuario = usuario; 
-        return View("Perfil");
-    }
-    else
-    {
-        return RedirectToAction("Index"); 
-    }
+        string mail = HttpContext.Session.GetString("mail");
+        string contraseña = HttpContext.Session.GetString("contraseña");
+        
+        if (!string.IsNullOrEmpty(mail))
+        {
+            Usuario usuario = new Usuario(mail, contraseña);
+            BD.ObtenerDatos(usuario);
+            ViewBag.Usuario = usuario; 
+            return View("Perfil");
+        }
+        else
+        {
+            return RedirectToAction("Index"); 
+        }
 }
 
     [HttpPost]
