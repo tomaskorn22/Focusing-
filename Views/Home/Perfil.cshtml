@@ -32,6 +32,7 @@
         <h2>Bienvenido, @usuario.nombre @usuario.apellido</h2>
         <p><strong>Email:</strong> @usuario.mail</p>
         <p><strong>Edad:</strong> @usuario.edad</p>
+        <a class="btn btn-primary" href="@Url.Action("CierreSesion")">Cerrar sesión</a>
     }
     else
     {

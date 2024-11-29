@@ -10,6 +10,7 @@ public class Usuario
     public string mail { get; set; }
     public string contraseña { get; set; }
     public int edad { get; set; }
+    public int Id_sentimiento { get; set; }
 
     // Constructor tradicional
     public Usuario(string mail, string contraseña)

@@ -6,6 +6,7 @@ namespace Focusing.Controllers;
 
 public class HomeController : Controller
 {
+    const string SESSION_USUARIO = "user";
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -15,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.User = ObtenerUsuario(HttpContext);
+        ViewBag.Usuario = ObtenerUsuario(HttpContext);
         ViewBag.Sentimientos = BD.ObtenerSentimientos();
         
         if (ViewBag.User != null)
@@ -51,22 +52,38 @@ public class HomeController : Controller
 {
     //string contraReal = BD.ObtenerContraseña(mail,contraseña);
     int idUsuario;
-    if (HttpContext.Request.Method == "POST" && mail != null && contraseña != null && BD.ComprobarUsuarioValido(mail,contraseña))
+    Usuario? usuario = ObtenerUsuario(HttpContext);
+    
+    if (usuario == null && HttpContext.Request.Method == "POST" && mail != null && contraseña != null && BD.ComprobarUsuarioValido(mail,contraseña))
     {
         idUsuario = BD.ObtenerIdUsuario(mail);
-        HttpContext.Session.SetInt32("user", idUsuario);
+        HttpContext.Session.SetInt32(SESSION_USUARIO, idUsuario);
         ViewBag.UserId = idUsuario;
         return RedirectToAction("Index");
     }
-    else
+    else if (usuario == null)
     {
         return View("InicioSesion");
     }
+    else
+    {
+        return RedirectToAction("Index");
+    }
 }
-    public IActionResult AgregarUsuario(Usuario Usu){
-        BD.AgregarUsuario(Usu);
-        ViewBag.UserId = Usu.Id_usuario;
-        return View("Index");
+    public IActionResult AgregarUsuario(Usuario Usu)
+    {
+        Usuario? usuario = ObtenerUsuario(HttpContext);
+
+        if (usuario == null)
+        {
+            BD.AgregarUsuario(Usu);
+            ViewBag.UserId = Usu.Id_usuario;
+            return View("Index");
+        }
+        else
+        {
+            return RedirectToAction("Index");
+        }
     }
 
     public IActionResult Tips(int Id_sentimiento)
@@ -81,7 +98,16 @@ public class HomeController : Controller
     }
     public IActionResult CrearCuenta()
     {
-        return View("CrearCuenta");
+        Usuario? usuario = ObtenerUsuario(HttpContext);
+
+        if (usuario == null)
+        {
+            return View("CrearCuenta");
+        }
+        else
+        {
+            return RedirectToAction("Index");
+        }
     }
 
     public IActionResult Juegos()
@@ -99,15 +125,24 @@ public class HomeController : Controller
 
     public IActionResult ListaMelodias(int Id_sentimiento)
     {
-        List<Melodias> sonidos = BD.ObtenerSonidos(Id_sentimiento);
-        ViewBag.Sonidos = sonidos;
+        Usuario? usuario = ObtenerUsuario(HttpContext);
+        List<Melodias> sonidos = new List<Melodias>();
 
+        if (usuario != null && usuario.Id_sentimiento != null)
+            sonidos = BD.ObtenerSonidos(Id_sentimiento);
+
+        ViewBag.Sonidos = sonidos;
         return View("Sonidos");
     }
 
-    public IActionResult ListaTips(int Id_sentimiento)
+    public IActionResult ListaTips()
     {
-        List<Tips> tips = BD.ObtenerTips(Id_sentimiento);
+        Usuario? usuario = ObtenerUsuario(HttpContext);
+        List<Tips> tips = new List<Tips>();
+        
+        if (usuario != null && usuario.Id_sentimiento != null)
+            tips = BD.ObtenerTips(usuario.Id_sentimiento);
+        
         ViewBag.Tips = tips;
         return View("Tips");
     }
@@ -132,6 +167,14 @@ public class HomeController : Controller
         }
 }
 
+
+    public IActionResult CierreSesion()
+    {
+        HttpContext.Session.Remove(SESSION_USUARIO);
+        return RedirectToAction("InicioSesion");
+    }
+
+
     [HttpPost]
     public IActionResult GuardarSentimientosPorUsuario(int Id_usuario, int Id_sentimiento)
     {
@@ -141,12 +184,9 @@ public class HomeController : Controller
     }
 
 
-
-
-
     private static Usuario? ObtenerUsuario(HttpContext httpContext)
     {
-        int? idUsuario = httpContext.Session.GetInt32("user");
+        int? idUsuario = httpContext.Session.GetInt32(SESSION_USUARIO);
         Usuario? usuario = BD.ObtenerUsuario(idUsuario);
 
         return usuario;

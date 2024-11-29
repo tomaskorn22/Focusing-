@@ -1,5 +1,5 @@
 ﻿@{
-    Usuario usuario = ViewBag.Usuario as Usuario;  
+    ViewData["Title"] = "Mi tablero";
 }
 
 <header class="header">
@@ -44,8 +44,8 @@
                         </li>
                     }
                 </ul>
-                @if(usuario != null) {
-                    <input type="hidden" name="Id_usuario" value="@usuario.Id_usuario" />
+                @if (ViewBag.Usuario != null) {
+                    <input type="hidden" name="Id_usuario" value="@ViewBag.Usuario.Id_usuario" />
                     <button type="submit" class="btn btn-primary">Guardar Selección</button>
                 } else {
                     <p>Para guardar tu sentimiento, logueate</p>

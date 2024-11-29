@@ -99,7 +99,7 @@ public static Usuario? ObtenerUsuario(int? Id_usuario)
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Tips WHERE Id_sentimiento = @Id_sentimiento";
-            tips = db.Query<Tips>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
+            tips = db.Query<Tips>(sql, new { Id_sentimiento = Id_sentimiento }).ToList();
         }
         return tips;
    }
