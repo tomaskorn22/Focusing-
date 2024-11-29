@@ -117,9 +117,13 @@ public class HomeController : Controller
 
     public IActionResult ListaJuegos(int Id_sentimiento)
     {
-        List<Juegos> juegos = BD.ObtenerJuegos(Id_sentimiento);
-        ViewBag.Juegos = juegos;
+        Usuario? usuario = ObtenerUsuario(HttpContext);
+        List<Juegos> juegos = new List<Juegos>();
+        
+        if (usuario != null && usuario.Id_sentimiento != null)
+            juegos = BD.ObtenerJuegos(Id_sentimiento);
 
+        ViewBag.Juegos = juegos;
         return View("Juegos");
     }
 

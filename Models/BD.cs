@@ -66,16 +66,18 @@ public static Usuario? ObtenerUsuario(int? Id_usuario)
     public static List<Juegos> ObtenerJuegos(int Id_sentimiento)
     {
         List<Juegos> Juego = null;
-        using(SqlConnection db = new SqlConnection(_connectionString)){
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
             string sql = "SELECT * FROM Juegos WHERE Id_sentimiento = @Id_sentimiento";
-            Juego = db.Query<Juegos>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
+            Juego = db.Query<Juegos>(sql, new { Id_sentimiento = Id_sentimiento }).ToList();
         }
         return Juego;
     }
 
     public static List<Sentimientos> ObtenerSentimientos(){
         List<Sentimientos> Sentimientos = null;
-        using(SqlConnection db = new SqlConnection(_connectionString)){
+        using(SqlConnection db = new SqlConnection(_connectionString))
+        {
             string sql = "SELECT * FROM Sentimientos";
             Sentimientos = db.Query<Sentimientos>(sql).ToList();
         }
@@ -87,7 +89,7 @@ public static Usuario? ObtenerUsuario(int? Id_usuario)
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Melodias WHERE Id_sentimiento = @Id_sentimiento";
-            sonidos = db.Query<Melodias>(sql, new {@Id_sentimiento = Id_sentimiento}).ToList();
+            sonidos = db.Query<Melodias>(sql, new { Id_sentimiento = Id_sentimiento }).ToList();
         }
         return sonidos;
     } 
@@ -95,7 +97,6 @@ public static Usuario? ObtenerUsuario(int? Id_usuario)
    public static List<Tips> ObtenerTips(int Id_sentimiento)
     {
         List<Tips> tips = null;
-
         using(SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = "SELECT * FROM Tips WHERE Id_sentimiento = @Id_sentimiento";
