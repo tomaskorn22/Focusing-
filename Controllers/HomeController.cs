@@ -115,25 +115,25 @@ public class HomeController : Controller
         return View("Juegos");
     }
 
-    public IActionResult ListaJuegos(int Id_sentimiento)
+    public IActionResult ListaJuegos()
     {
         Usuario? usuario = ObtenerUsuario(HttpContext);
         List<Juegos> juegos = new List<Juegos>();
         
         if (usuario != null && usuario.Id_sentimiento != null)
-            juegos = BD.ObtenerJuegos(Id_sentimiento);
+            juegos = BD.ObtenerJuegos(usuario.Id_sentimiento);
 
         ViewBag.Juegos = juegos;
         return View("Juegos");
     }
 
-    public IActionResult ListaMelodias(int Id_sentimiento)
+    public IActionResult ListaMelodias()
     {
         Usuario? usuario = ObtenerUsuario(HttpContext);
         List<Melodias> sonidos = new List<Melodias>();
 
         if (usuario != null && usuario.Id_sentimiento != null)
-            sonidos = BD.ObtenerSonidos(Id_sentimiento);
+            sonidos = BD.ObtenerSonidos(usuario.Id_sentimiento);
 
         ViewBag.Sonidos = sonidos;
         return View("Sonidos");
