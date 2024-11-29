@@ -15,12 +15,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.User = Usuario.FromString(HttpContext.Session.GetString("user"));
+        ViewBag.User = ObtenerUsuario(HttpContext);
         ViewBag.Sentimientos = BD.ObtenerSentimientos();
         
         if (ViewBag.User != null)
         {   
-            ViewBag.id_usuario =  ViewBag.User.id_usuario;
+            ViewBag.Id_usuario =  ViewBag.User.Id_usuario;
         }
         return View();
    }
@@ -119,13 +119,10 @@ public class HomeController : Controller
     }
     public IActionResult Perfil()
     {
-        string mail = HttpContext.Session.GetString("mail");
-        string contraseña = HttpContext.Session.GetString("contraseña");
+        Usuario? usuario = ObtenerUsuario(HttpContext);
         
-        if (!string.IsNullOrEmpty(mail))
+        if (usuario != null)
         {
-            Usuario usuario = new Usuario(mail, contraseña);
-            BD.ObtenerDatos(usuario);
             ViewBag.Usuario = usuario; 
             return View("Perfil");
         }
@@ -141,5 +138,17 @@ public class HomeController : Controller
         Console.WriteLine(Id_usuario + "" +Id_sentimiento );
     BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
     return RedirectToAction("Index", "Home");
+    }
+
+
+
+
+
+    private static Usuario? ObtenerUsuario(HttpContext httpContext)
+    {
+        int? idUsuario = httpContext.Session.GetInt32("user");
+        Usuario? usuario = BD.ObtenerUsuario(idUsuario);
+
+        return usuario;
     }
 }

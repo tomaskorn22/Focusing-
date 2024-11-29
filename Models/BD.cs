@@ -32,6 +32,21 @@ public static class BD
 
     return usuario;
 }
+public static Usuario? ObtenerUsuario(int? Id_usuario)
+{
+    const string sql = "SELECT * FROM Usuarios WHERE Id_usuario = @Id_usuario";
+    Usuario? usuario = null;
+
+    if (Id_usuario != null)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            usuario = db.QueryFirstOrDefault<Usuario>(sql, new { Id_usuario = Id_usuario });
+        }
+    }
+
+    return usuario;
+}
     public static void ObtenerDatos(Usuario Usu)
   {
     using (SqlConnection db = new SqlConnection(_connectionString))

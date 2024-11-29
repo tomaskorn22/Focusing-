@@ -143,4 +143,5 @@ C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\refint\Focusing.dll
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\Focusing.pdb
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\Focusing.genruntimeconfig.cache
 C:\Users\48796259\Desktop\Focusing-\obj\Debug\net7.0\ref\Focusing.dll
-C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.csproj.CopyComplete
+C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.sourcelink.json
+C:\Users\48242157\Downloads\Focusing-\obj\Debug\net7.0\Focusing.csproj.Up2Date
