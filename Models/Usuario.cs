@@ -12,14 +12,14 @@ public class Usuario
     public int edad { get; set; }
     public int Id_sentimiento { get; set; }
 
-    // Constructor tradicional
+    
     public Usuario(string mail, string contraseña)
     {
         this.mail = mail;
         this.contraseña = contraseña;
     }
 
-    // Constructor sin parámetros (requerido para la serialización/deserialización)
+    
     public Usuario() { }
 
     public override string ToString()

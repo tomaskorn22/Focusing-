@@ -32,25 +32,23 @@ public class HomeController : Controller
         return View("Calendario");
     }
 
-    // Método para agregar un evento
+    
     [HttpPost]
     public IActionResult AgregarEvento(Evento evento)
     {
-        BD.GuardarEvento(evento); // Llama a la base de datos para guardar el evento
+        BD.GuardarEvento(evento); 
         return RedirectToAction("Calendario");
     }
 
-    // Método para obtener eventos de una fecha específica
     [HttpGet]
     public JsonResult ObtenerEventos(DateTime fecha)
     {
-        var eventos = BD.ObtenerEventosPorFecha(fecha); // Llama a la base de datos para obtener eventos por fecha
+        var eventos = BD.ObtenerEventosPorFecha(fecha); 
         return Json(eventos);
     }
     
     public IActionResult InicioSesion(string? mail, string? contraseña)
 {
-    //string contraReal = BD.ObtenerContraseña(mail,contraseña);
     int idUsuario;
     Usuario? usuario = ObtenerUsuario(HttpContext);
     
@@ -182,7 +180,6 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult GuardarSentimientosPorUsuario(int Id_usuario, int Id_sentimiento)
     {
-        Console.WriteLine(Id_usuario + "" +Id_sentimiento );
     BD.GuardarSentimientoPorUsuario(Id_usuario, Id_sentimiento);
     return RedirectToAction("Index", "Home");
     }
