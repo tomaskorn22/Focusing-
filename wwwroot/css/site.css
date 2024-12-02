@@ -45,7 +45,7 @@ body {
   width: 400px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 25px; /* Para separar del header */
+  margin-top: 25px; 
 }
 
 .logo img {
@@ -446,7 +446,7 @@ h2 {
   font-size: 24px;
 }
 
-/* Estilos del calendario */
+
 .calendario {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -461,7 +461,7 @@ h2 {
   
 }
 
-/* Estilo para los nombres de los días */
+
 .day-name {
   text-align: center;
   font-weight: bold;
@@ -472,7 +472,7 @@ h2 {
   aspect-ratio: 1 / 1;
 }
 
-/* Estilo para cada día */
+
 .day {
   text-align: center;
   padding: 20px;
@@ -487,14 +487,14 @@ h2 {
   background-color: #f0f8ff;
 }
 
-/* Estilo para el día actual */
+
 .day.current-day {
   background-color: #2f4f6f;
   color: white;
   font-weight: bold;
 }
 
-/* Formulario de evento */
+
 .event-form {
   background-color: white;
   padding: 20px;
@@ -534,7 +534,7 @@ h2 {
   background-color: #1f3b4f;
 }
 
-/* Modal de eventos */
+
 #eventModal {
   position: fixed;
   top: 50%;
@@ -601,7 +601,7 @@ h2 {
   color: #ffd700;
 }
 
-/* Estilos para el título de juegos */
+
 h2 {
   text-align: center;
   font-size: 24px;
@@ -610,7 +610,7 @@ h2 {
   font-weight: bold;
 }
 
-/* Estilos para la lista de juegos */
+
 .listaImagenes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -619,7 +619,7 @@ h2 {
   padding: 20px;
 }
 
-/* Tarjeta de juego */
+
 .listaImagenes li {
   width: 200px;
   background-color: #4a90e2;
@@ -645,7 +645,7 @@ h2 {
   margin: 5px 0;
 }
 
-/* Botón Jugar */
+
 .jugar-btn {
   background-color: #4b7bba;
   color: white;
@@ -663,7 +663,7 @@ h2 {
   background-color: #3a6390;
 }
 
-/* Ajuste del fondo */
+
 body {
   background-color: #f4f4f4;
 }
