@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [Focusing Empowering Minds]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Database [Focusing Empowering Minds]    Script Date: 28/3/2025 11:44:54 ******/
 CREATE DATABASE [Focusing Empowering Minds]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -79,10 +79,10 @@ ALTER DATABASE [Focusing Empowering Minds] SET QUERY_STORE = OFF
 GO
 USE [Focusing Empowering Minds]
 GO
-/****** Object:  User [alumno]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  User [alumno]    Script Date: 28/3/2025 11:44:54 ******/
 CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
 GO
-/****** Object:  Table [dbo].[Calendario]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Calendario]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -98,7 +98,7 @@ CREATE TABLE [dbo].[Calendario](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categorias]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Categorias]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Categorias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Evento]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Evento]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -128,7 +128,7 @@ CREATE TABLE [dbo].[Evento](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Foro]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Foro]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -143,7 +143,7 @@ CREATE TABLE [dbo].[Foro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Juegos]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Juegos]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -160,7 +160,7 @@ CREATE TABLE [dbo].[Juegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Melodias]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Melodias]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -177,7 +177,7 @@ CREATE TABLE [dbo].[Melodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Recordatorio]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Recordatorio]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -193,7 +193,7 @@ CREATE TABLE [dbo].[Recordatorio](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Sentimientos]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Sentimientos]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -208,7 +208,7 @@ CREATE TABLE [dbo].[Sentimientos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXJuegos]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[SentimientosXJuegos]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -223,7 +223,7 @@ CREATE TABLE [dbo].[SentimientosXJuegos](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXMelodias]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[SentimientosXMelodias]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -238,7 +238,7 @@ CREATE TABLE [dbo].[SentimientosXMelodias](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SentimientosXTips]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[SentimientosXTips]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -253,7 +253,7 @@ CREATE TABLE [dbo].[SentimientosXTips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Tips]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Tips]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -268,7 +268,7 @@ CREATE TABLE [dbo].[Tips](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Usuarios]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  Table [dbo].[Usuarios]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -291,6 +291,8 @@ SET IDENTITY_INSERT [dbo].[Evento] ON
 
 INSERT [dbo].[Evento] ([id_evento], [Fecha], [Titulo], [Descripcion]) VALUES (1, CAST(N'2024-12-25T00:00:00.000' AS DateTime), N'ddty', N'tyty')
 INSERT [dbo].[Evento] ([id_evento], [Fecha], [Titulo], [Descripcion]) VALUES (2, CAST(N'2024-12-18T00:00:00.000' AS DateTime), N'Lengua', N'oral mañana')
+INSERT [dbo].[Evento] ([id_evento], [Fecha], [Titulo], [Descripcion]) VALUES (3, CAST(N'2025-03-02T00:00:00.000' AS DateTime), N'LOgaritmos', NULL)
+INSERT [dbo].[Evento] ([id_evento], [Fecha], [Titulo], [Descripcion]) VALUES (4, CAST(N'2025-03-10T00:00:00.000' AS DateTime), N'LOgaritmos', N'djkdlhkvd')
 SET IDENTITY_INSERT [dbo].[Evento] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Juegos] ON 
@@ -328,11 +330,50 @@ INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (3, N'An
 INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (4, N'Horas antes, definí el tiempo a usar para estudiar y despejalo de otras tareas.', 4)
 INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (5, N'Tomate descansos chiquitos, de 10 minutos, entre rato y rato de estudio.', 1)
 INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (6, N'Ganá tiempo, tené todo lo necesario cerca así aprovechas el tiempo.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (7, N'Estudia en un lugar libre de ruido y distracciones', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (8, N'Un escritorio limpio te ayuda a pensar con claridad', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (9, N'Evita distracciones causadas por incomodidad.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (10, N'Evita distracciones causadas por incomodidad.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (11, N'Solo ten lo necesario sobre tu escritorio.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (12, N'25 minutos de estudio + 5 minutos de descanso.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (13, N'Relaciona conceptos visualmente para entender mejor.', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (14, N'Anota solo lo más importante para que puedas repasarlo rápidamente.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (15, N'Explicar los conceptos a otra persona refuerza tu conocimiento.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (16, N'Cuanto más te cuestiones, más profundizas en el tema.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (17, N' Leer y escuchar a ti mismo te ayuda a procesar mejor la información.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (18, N'No intentes estudiar todo de una vez. Divide el tiempo.', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (19, N'La técnica de "interleaving" puede mejorar tu retención.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (20, N'Relacionar teoría con ejemplos hace que sea más fácil recordarlo.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (21, N'Revisa lo que sabes haciendo exámenes o cuestionarios.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (22, N'Establecer horarios de estudio te ayuda a tener disciplina.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (23, N'Evita el azúcar en exceso; opta por proteínas y carbohidratos complejos.
+
+', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (24, N'La deshidratación afecta la concentración|', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (25, N'Un buen descanso es crucial para procesar la información.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (26, N' La actividad física mejora la circulación sanguínea y el rendimiento cerebral.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (27, N' Desactiva las redes sociales cuando estudias.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (28, N' Levántate cada 30 minutos y mueve el cuerpo.
+
+', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (29, N'Al principio del estudio, tu mente está más fresca.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (30, N'Usa videos, lecturas y ejercicios para reforzar lo aprendido.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (31, N' 5 minutos de descanso cada 25 minutos de estudio.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (32, N' La ansiedad reduce la capacidad de concentración.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (33, N'Recordar que eres capaz puede darte un impulso de confianza.', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (34, N'Concéntrate en tu propio progreso.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (35, N'Lleva un registro de lo que has logrado para mantenerte motivado.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (36, N' No busques hacer todo perfectamente. Es mejor avanzar que quedar estancado.', 5)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (37, N'Aprender de los errores es clave para mejorar.', 1)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (38, N'Imagina cómo te sentirás cuando hayas alcanzado tus objetivos.', 2)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (39, N' Enfócate en una tarea a la vez para lograr más en menos tiempo.', 3)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (40, N'Tener claro tu propósito te ayudará a mantener la concentración.', 4)
+INSERT [dbo].[Tips] ([id_tips], [descripcion], [Id_sentimiento]) VALUES (41, N'Establece metas alcanzables y no te frustres si no lo consigues todo de inmediato', 5)
 SET IDENTITY_INSERT [dbo].[Tips] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Usuarios] ON 
 
-INSERT [dbo].[Usuarios] ([Id_usuario], [nombre], [apellido], [mail], [contraseña], [edad], [Id_sentimiento]) VALUES (4, N'Tomas', N'Korngold', N'tomykorngold@gmail.com', N'kalek123', 17, 1)
+INSERT [dbo].[Usuarios] ([Id_usuario], [nombre], [apellido], [mail], [contraseña], [edad], [Id_sentimiento]) VALUES (4, N'Tomas', N'Korngold', N'tomykorngold@gmail.com', N'kalek123', 17, 3)
 INSERT [dbo].[Usuarios] ([Id_usuario], [nombre], [apellido], [mail], [contraseña], [edad], [Id_sentimiento]) VALUES (5, N'Uriel', N'Engelberg', N'uritoeng@gmail.com', N'furrini123', 16, NULL)
 INSERT [dbo].[Usuarios] ([Id_usuario], [nombre], [apellido], [mail], [contraseña], [edad], [Id_sentimiento]) VALUES (6, N'aa', N'dd', N'a@a', N'123', 1, NULL)
 INSERT [dbo].[Usuarios] ([Id_usuario], [nombre], [apellido], [mail], [contraseña], [edad], [Id_sentimiento]) VALUES (7, N'Jorge', N'alvez', N'jorge@gmail.com', N'jorgito24', 90, 1)
@@ -408,7 +449,7 @@ ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[Usuarios] CHECK CONSTRAINT [FK_Usuarios_Sentimientos]
 GO
-/****** Object:  StoredProcedure [dbo].[SP_ComprobarUsuarioValido]    Script Date: 2/12/2024 08:29:02 ******/
+/****** Object:  StoredProcedure [dbo].[SP_ComprobarUsuarioValido]    Script Date: 28/3/2025 11:44:54 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
