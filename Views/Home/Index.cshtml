@@ -48,7 +48,7 @@
                     <input type="hidden" name="Id_usuario" value="@ViewBag.Usuario.Id_usuario" />
                     <button type="submit" class="btn btn-primary">Guardar Selección</button>
                 } else {
-                    <p>Para guardar tu sentimiento, logueate</p>
+                    <h2>Para guardar tu sentimiento, logueate</h2>
                 }
             </form>
         }
@@ -60,7 +60,7 @@
     
     <div class="row">
         <div class="recordatorio">
-            <h4>RECORDATORIO</h4>
+            <h4>RECORDATORIOS</h4>
             <ul>
                 <li>Faltan 4 días para el tp de EFSI. ¡A estudiar!</li>
                 <li>Faltan 6 días para la prueba de Educación Judía. ¡A estudiar!</li>
@@ -70,7 +70,6 @@
         <div class="tareas">
             <h4>TPS/Tareas</h4>
             <ul>
-                <li><span class="tachado">Prueba física 14/10</span></li>
                 <li><input type="checkbox"> Tp EFSI 19/10</li>
                 <li><input type="checkbox"> Prueba Judía 21/10</li>
                 <li><input type="checkbox"> Prueba Inglés 25/10</li>
@@ -91,10 +90,13 @@
         </div>
         
     </div>
-
+    <div>
     <h4>¿Qué materia querés estudiar?</h4>
     <input class="input-materia" type="text" placeholder="Escribí acá">
-    <button>Enviar</button>
+    <button class="botonEnviar">Enviar</button>
+    </div>
+
+    
 </div>
 
 <script src="~/js/contador.js"></script>
