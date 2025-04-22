@@ -351,8 +351,97 @@ button:hover {
   max-width: 200px;
 }
 
+/* CALENDARIO*/
 
+.tips-container {
+  padding: 40px 20px;
+  background-color: #f4f6f9;
+  color: #16295C;
+  min-height: 100vh;
+  text-align: center;
+}
 
+.tips-container h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dia {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 120px;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dia .numero {
+  font-weight: bold;
+  color: #16295C;
+}
+
+.dia button {
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+#eventModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  display: none;
+}
+
+#eventModal h3 {
+  margin-bottom: 15px;
+}
+
+#eventList {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+#eventModal button {
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#eventModal button:hover {
+  background-color: #e08100;
+}
 
 /** {
   margin: 0;
