@@ -26,13 +26,13 @@
     </div>
 </header>
 
-<div class="container" style="min-width: 100vw;">
+<div class="container-perfil" style="min-width: 100vw;">
     @if (usuario != null)
     {
         <h2>Bienvenido, @usuario.nombre @usuario.apellido</h2>
         <p><strong>Email:</strong> @usuario.mail</p>
         <p><strong>Edad:</strong> @usuario.edad</p>
-        <a class="btn btn-primary" href="@Url.Action("CierreSesion")">Cerrar sesión</a>
+        <a class="btn btn-primary perfil" href="@Url.Action("CierreSesion")">Cerrar sesión</a>
     }
     else
     {
