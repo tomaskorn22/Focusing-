@@ -273,6 +273,85 @@ button:hover {
   margin-top: 30px;
 }
 
+/* SONIDO */
+.content {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  color: #16295C;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  color: #16295C;
+}
+
+.listaImagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.listaImagenes li {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listaImagenes li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.listaImagenes li img {
+  width: 100%;
+  max-width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.listaImagenes li p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #16295C;
+}
+
+/*JUEGO*/
+.jugar-btn {
+  background-color: #FF9800;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 12px;
+  transition: background-color 0.3s;
+}
+
+.jugar-btn:hover {
+  background-color: #e07f00;
+}
+
+.listaImagenes li audio {
+  width: 100%;
+  max-width: 200px;
+}
+
+
 
 
 /** {
