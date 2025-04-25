@@ -24,29 +24,5 @@
     </div>
 </header>
 
-<div class="tips-container" style="min-width: 100vw;">
-    <h2>Guardá y organizá tus recordatorios acá.</h2>
+<iframe src="https://calendar.google.com/calendar/embed?src=es.judaism%23holiday%40group.v.calendar.google.com&ctz=America%2FArgentina%2FBuenos_Aires" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
-    <div class="calendario" id="calendar">
-    </div>
-
-    <div class="event-form" style="display: none;">
-        <h3>Agregar Evento</h3>
-        <form asp-action="AgregarEvento" method="post">
-            <input type="hidden" id="Fecha" name="Fecha">
-            <label for="Titulo">Título:</label>
-            <input type="text" name="Titulo" required>
-            <label for="Descripcion">Descripción:</label>
-            <textarea name="Descripcion"></textarea>
-            <button type="submit" class="btn btn-primary">Guardar Evento</button>
-        </form>
-    </div>
-
-    <div id="eventModal" style="display: none;">
-        <h3>Eventos del Día</h3>
-        <div id="eventList"></div>
-        <button onclick="cerrarModal()">Cerrar</button>
-    </div>
-</div>
-
-<script src="~/js/calendario.js"></script>
