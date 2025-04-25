@@ -27,15 +27,17 @@
 </header>
 
 <div class="container-perfil" style="min-width: 100vw;">
-    @if (usuario != null)
-    {
-        <h2>Bienvenido, @usuario.nombre @usuario.apellido</h2>
-        <p><strong>Email:</strong> @usuario.mail</p>
-        <p><strong>Edad:</strong> @usuario.edad</p>
-        <a class="btn btn-primary perfil" href="@Url.Action("CierreSesion")">Cerrar sesión</a>
-    }
-    else
-    {
-        <p>No se encontró información del usuario.</p>
-    }
+    <div class="perfil-box">
+        @if (usuario != null)
+        {
+            <h2>Bienvenido, @usuario.nombre @usuario.apellido</h2>
+            <p><strong>Email:</strong> @usuario.mail</p>
+            <p><strong>Edad:</strong> @usuario.edad</p>
+            <a class="btn perfil" href="@Url.Action("CierreSesion")">Cerrar sesión</a>
+        }
+        else
+        {
+            <p>No se encontró información del usuario.</p>
+        }
+    </div>
 </div>

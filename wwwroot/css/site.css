@@ -482,59 +482,83 @@ button:hover {
 
 /*PERFIL*/
 .container-perfil {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #16295C 50%, #e07f00 50%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.perfil-box {
+  background-color: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  color: #16295C;
-  font-family: 'Arial', sans-serif;
-}
-
-.container-perfil h2 {
-  font-size: 26px;
-  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
   text-align: center;
-  position: relative;
-  color: #16295C;
 }
 
-.container-perfil h2::after {
+.perfil-box h2 {
+  color: #16295C;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.perfil-box h2::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 60px;
   height: 3px;
   background-color: #FF9800;
-  margin: 8px auto 0;
-  border-radius: 2px;
+  margin: 10px auto 0;
+  border-radius: 3px;
 }
 
-.container-perfil p {
+.perfil-box p {
   font-size: 18px;
-  margin: 12px 0;
+  margin: 16px 0;
   padding: 12px 16px;
   background-color: #f9f9f9;
-  border-left: 4px solid #FF9800;
+  border-left: 5px solid #FF9800;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  text-align: left;
 }
 
-.container-perfil strong {
+.perfil-box strong {
   color: #247d7f;
 }
 
 .btn.perfil {
   display: inline-block;
   margin-top: 25px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #FF9800;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.btn.perfil:hover {
+  background-color: #e08900;
+}
+
+@media (max-width: 768px) {
+  .perfil-box {
+    padding: 30px 20px;
+  }
+
+  .perfil-box p {
+    font-size: 16px;
+  }
 }
 
 /*INICIO SESION */
@@ -543,7 +567,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #16295C 50%, #9b9a9a 50%);
+  background: linear-gradient(135deg, #16295C 50%, #FF9800 50%);
   font-family: 'Arial', sans-serif;
   padding: 20px;
   box-sizing: border-box;
@@ -560,7 +584,6 @@ button:hover {
   flex-wrap: wrap;
 }
 
-/* Lado izquierdo */
 .left-side,
 .right-side {
   padding: 40px;
@@ -621,7 +644,6 @@ button:hover {
   color: #FF9800;
 }
 
-/* Lado derecho */
 .right-side {
   background-color: #f5f5f5;
   color: #333;
@@ -644,7 +666,6 @@ button:hover {
   padding: 0 10px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .login-box {
     flex-direction: column;
