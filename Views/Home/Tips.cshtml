@@ -26,7 +26,9 @@
 </header>
 
 <div class="tips-container" style="min-width: 100vw;">
+    
     <h2>Leé estos tips antes de estudiar.</h2>
+    <div class="container-espaciado">
     @if (ViewBag.Tips != null && ViewBag.Tips.Count > 0)
     {
         <ul class="listaImagenes">
@@ -41,5 +43,5 @@
     else
     {
         <p class="text-secondary text-center">No hay tips disponibles.</p>
-    }
+    }</div>
 </div>

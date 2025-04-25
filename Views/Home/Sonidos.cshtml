@@ -26,6 +26,7 @@
 
 <main class="content" style="min-width: 100vw;">
     <h1>Hacé click para escuchar melodías mientras estudias.</h1>
+    <div class="container-espaciado">
     @if (ViewBag.Sonidos != null && ViewBag.Sonidos.Count > 0)
     {
         <ul class="listaImagenes">
@@ -44,4 +45,5 @@
     {
         <p class="text-secondary text-center">No hay melodías disponibles.</p>
     }
+    </div>
 </main>

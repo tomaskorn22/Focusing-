@@ -24,19 +24,19 @@
     </div>
 </header>
 
-<div class="container" style="min-width: 100vw;">
+<div class="container">
     <h1>MI TABLERO</h1>
     <h3>¿Cómo te sentís hoy?</h3>
-        
-    <div class="sentimientos">
+
+    <div class="sentimientos-box">
         @if (ViewBag.Sentimientos != null && ViewBag.Sentimientos.Count > 0)
         {
             <form method="post" action='@Url.Action("GuardarSentimientosPorUsuario", "Home")'>
-                <ul class="listaImagenes d-flex">
+                <ul class="sentimientos-grid">
                     @foreach (Sentimientos sentimiento in ViewBag.Sentimientos) 
                     {
                         <li>
-                            <label>
+                            <label class="sentimiento-item">
                                 <input type="checkbox" name="Id_sentimiento" value="@sentimiento.Id_sentimiento" />
                                 <img src="@sentimiento.foto" alt="@sentimiento.nombre" />
                                 <p>@sentimiento.nombre</p>
@@ -57,6 +57,7 @@
             <p>No hay sentimientos disponibles para seleccionar.</p>
         }
     </div>
+</div>
     
     <div class="row">
         <div class="recordatorio">

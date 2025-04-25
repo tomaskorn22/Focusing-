@@ -45,45 +45,75 @@ body {
   padding: 20px;
   background: #ffffff;
   border-radius: 10px;
+  text-align: center;
 }
 
 .container h1, h2, h3, h4, p {
   color: #16295C !important;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-.sentimientos ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  padding: 0;
+.sentimientos-box {
+  position: relative;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 30px 0;
+  overflow: hidden;
 }
 
-.sentimientos li {
+.sentimientos-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: #e07f00;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.sentimientos-grid {
   list-style: none;
-  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.sentimiento-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
   position: relative;
 }
 
-.sentimientos input[type="checkbox"] {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
+.sentimiento-item input[type="checkbox"] {
+  display: none;
 }
 
-.sentimientos img {
+.sentimiento-item img {
   width: 120px;
   height: 120px;
   border-radius: 10px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.sentimientos img:hover {
-  transform: scale(1.1);
+.sentimiento-item input[type="checkbox"]:checked + img {
+  transform: scale(1.15);
+  box-shadow: 0px 6px 16px rgba(224, 127, 0, 0.5);
+}
+
+.sentimiento-item p {
+  margin-top: 10px;
+  color: #16295C;
+  font-weight: bold;
 }
 
 .row {
@@ -100,6 +130,7 @@ body {
   border-radius: 8px;
   border-width: 3px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 10%;
 }
 
 .tachado {
@@ -213,6 +244,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.container-espaciado{
+  margin-top: 7% ;
 }
 
 .tips-container h2 {
@@ -349,6 +383,10 @@ button:hover {
 .listaImagenes li audio {
   width: 100%;
   max-width: 200px;
+}
+.juegos-container{
+  margin-top: 7%;
+  text-decoration: none !important;
 }
 
 /* CALENDARIO*/

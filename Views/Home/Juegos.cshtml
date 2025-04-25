@@ -27,6 +27,7 @@
     
 <div class="tips-container" style="min-width: 100vw;">
     <h1>Jugá alguno de estos juegos antes de estudiar.</h1>
+    <div class="container-espaciado">
     @if (ViewBag.Juegos != null && ViewBag.Juegos.Count > 0)
     {
         <ul class="listaImagenes">
@@ -47,4 +48,5 @@
     {
         <p class="text-secondary text-center">No hay juegos disponibles.</p>
     }
+    </div>
 </div>
