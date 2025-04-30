@@ -115,6 +115,21 @@ body {
   font-weight: bold;
 }
 
+.btn.btn-primary {
+  background-color: #16295C !important;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn.btn-primary:hover {
+  background-color: #FF9800 !important;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -125,12 +140,12 @@ body {
 
 .recordatorio, .tareas {
   flex: 0.3;
-  text-align: center; /* centra el texto */
+  text-align: center; 
 }
 
 .recordatorio ul, .tareas ul {
   padding-left: 0;
-  list-style-position: inside; /* alinea los bullets al centro */
+  list-style-position: inside; 
 }
 
 .box-con-detalle {
